@@ -1,0 +1,14 @@
+## Ignore file 
+
+*
+
+!/**/
+!*.js
+![Mn]akefuncs
+!*.sh
+!*.c
+!*.h
+
+
+!.gitignore
+
