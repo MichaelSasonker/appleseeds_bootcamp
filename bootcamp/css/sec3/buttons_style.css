@@ -1,0 +1,207 @@
+
+
+body
+{
+    background-color: rgb(134, 178, 236);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p
+{
+    font-size: 40px;
+    color: #ffffff;
+
+}
+.rgst1
+{
+    background: rgb(82, 233, 82);
+    color: #ffffff;
+    border: none;
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.rgst1:hover    
+{
+    color: #f4f4f4;
+    background: #5ef031;
+}
+.clr1
+{
+    background: red;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.clr1:hover {
+    color: #947e7e;
+    background: #ee2b2b;
+}
+.sbm1
+{
+    background: rgba(25, 57, 236, 0.904);
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.sbm1:hover {
+    color: #f4f4f4;
+    background: #2f20f7;
+}
+
+.rgst2
+{
+    background: orange;
+    color: #ffffff;
+    border: none;
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.rgst2:hover {
+    color: #f4f4f4;
+    background: #f5a62f;
+}
+
+.clr2
+{
+    background: rgb(218, 218, 39);
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.clr2:hover 
+{
+    color: #f4f4f4;
+    background: #e7f75d;
+}
+
+.sbm2
+{
+    background:rgb(197, 194, 194);
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.sbm2:hover 
+{
+    color: #f4f4f4;
+    background: #a8a8a6;
+}
+
+.rgst3
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid rgb(82, 233, 82);
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.rgst3:hover 
+{
+    color: #f4f4f4;
+    background: rgb(82, 233, 82);
+}
+
+.clr3
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid red;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.clr3:hover 
+{
+    color: #f4f4f4;
+    background: red;
+}
+
+.sbm3
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid rgba(25, 57, 236, 0.904);
+    font-size: 15px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.sbm3:hover 
+{
+    color: #f4f4f4;
+    background:  rgba(25, 57, 236, 0.904);
+}
+
+.rgst4
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid orange;
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.rgst4:hover 
+{
+    color: #f4f4f4;
+    background:  orange;
+}
+
+.clr4
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid rgb(218, 218, 39);
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.clr4:hover 
+{
+    color: #f4f4f4;
+    background:  rgb(218, 218, 39);
+}
+
+.sbm4
+{
+    background: none;
+    color: #ffffff;
+    border: 3px solid rgb(197, 194, 194);
+    font-size: 15px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.sbm4:hover 
+{
+    color: #f4f4f4;
+    background: rgb(197, 194, 194);
+}
