@@ -1,0 +1,57 @@
+*
+{
+    margin-left: 30px;
+    padding: 0;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    height: 1000px;
+}
+
+#one
+{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+#two
+{
+    border: 1px solid black;
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    left: 110px;
+    top: 60px;
+    z-index: 1;
+    background-color: white;
+}
+
+#three
+{
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    z-index: 2;
+    background-color: white;
+}
+
+#four
+{
+    border: 1px solid black;
+    width: 80px;
+    height: 300px;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+}
