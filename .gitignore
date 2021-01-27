@@ -4,6 +4,11 @@
 
 !/**/
 !*.js
+!*.css
+!*.html
+!*.jpeg
+!*.png
+!*.JPEG
 ![Mn]akefuncs
 !*.sh
 !*.c
