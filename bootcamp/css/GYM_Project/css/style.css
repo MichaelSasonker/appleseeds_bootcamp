@@ -417,7 +417,6 @@ h1, h2, h3
     border-color: #f7c08a;
 }
  
-
 /* Facilities Page */
 #facilities 
 {
@@ -452,8 +451,7 @@ h1, h2, h3
 #pool_sec 
 {
     height: 1000px;
-    position: relative;
-    
+    position: relative;   
 }
   
 #pool_sec .pool_img 
