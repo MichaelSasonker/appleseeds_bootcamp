@@ -418,3 +418,108 @@ h1, h2, h3
 }
  
 
+/* Facilities Page */
+#facilities 
+{
+    background: url('../img/weight2.jpg') no-repeat center center/cover;
+    height: 1000px;
+}
+  
+#facilities .facilities_content 
+{
+    color: #fff;
+    padding-top: 120px;
+    margin-top: 250px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+#facilities .facilities_content h1 .text_primary 
+{
+    font-size: 90px;
+    line-height: 1.1em;
+    margin-left: -40px;
+    color: #f57a00;
+}
+
+#facilities p
+{
+    font-size: 40px;
+    text-align: left;
+    margin-left: -40px;
+}
+
+#pool_sec 
+{
+    height: 1000px;
+    position: relative;
+    
+}
+  
+#pool_sec .pool_img 
+{
+    float: right;
+    width: 50%;
+    background: url('../img/olimpic_pool.jpg') no-repeat center center/cover;
+    min-height: 100%;
+}
+
+#pool_sec .pool_content 
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+ 
+#pool_sec .pool_content p 
+{
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+} 
+
+#pool_sec .text_primary
+{
+    color: #f57a00;
+    font-size: 90px;
+    line-height: 1.1em;
+    margin-left: -40px;
+}
+
+#facilities_3 
+{
+    background: url('../img/run.jpg') no-repeat center center/cover;
+    height: 1000px;
+}
+  
+#facilities_3 .facilities_content_3 
+{
+    color: #fff;
+    padding-top: 120px;
+    margin-top: 250px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+#facilities_3 .facilities_content_3 h1 .text_primary 
+{
+    font-size: 90px;
+    line-height: 1.1em;
+    margin-left: -40px;
+    color: #f57a00;
+}
+
+#facilities_3 p
+{
+    font-size: 40px;
+    text-align: left;
+    margin-left: -40px;
+}
+
+
