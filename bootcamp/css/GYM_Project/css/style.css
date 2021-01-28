@@ -11,20 +11,18 @@ body
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
-/*.main_header
-{
 
-
-}*/
 a
 {
     text-decoration: none;
     color: #333;
 }
+
 h1, h2, h3
 {
     padding-bottom: 20px;
 }
+
 .container 
 {
     margin: auto;
@@ -33,10 +31,45 @@ h1, h2, h3
     padding: 0 20px;
 }
 
+.btn_light 
+{
+    background: #f4f4f4;
+    color: #333;
+}
+  
+.bg_dark 
+{
+    background: #333;
+    color: #fff;
+}
+  
+.bg_light 
+{
+    background: #f4f4f4;
+    color: #333;
+}
+  
+.bg_primary 
+{
+    background: #f7c08a;
+    color: #333;
+}
+
 .clr 
 {
     clear: both;
 }
+
+.l_heading 
+{
+    font-size: 40px;
+}
+  
+/* Padding */
+.py_1 { padding: 10px 0; }
+.py_2 { padding: 20px 0; }
+.py_3 { padding: 30px 0; }
+  
 
 #nav_bar
 {
@@ -139,7 +172,7 @@ h1, h2, h3
     color: #333;
 }
  
-/* Facilities Sec */
+/* About Sec */
 #info_sec 
 {
     height: 1000px;
@@ -336,3 +369,44 @@ h1, h2, h3
     padding: 10px ;
     font-size: 25px;
 }
+
+/* Contact Form */
+#contact_form .info_img
+{
+    width: 100%;
+    background: url('../img/no_pain.jpeg') no-repeat center center/cover;
+    min-height: 970px;
+    opacity: 0.9;
+}
+#contact_form .form_group 
+{
+    margin-bottom: 20px;
+}
+  
+#contact_form label 
+{
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#contact_form input, 
+#contact_form textarea 
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+}
+  
+#contact_form textarea 
+{
+    height: 200px;
+}
+  
+#contact_form input:focus, 
+#contact_form textarea:focus 
+{
+    outline: none;
+    border-color: #f7c08a;
+}
+ 
+
