@@ -128,7 +128,6 @@ h1, h2, h3
 #showcase .showcase_content 
 {
     color: #fff;
-    /* text-align:justify; */
     padding-top: 120px;
     margin-top: 250px;
     text-align: center;
@@ -196,9 +195,7 @@ h1, h2, h3
     background-color: #2b2b2b;
     text-align: center;
     padding: 50px 30px;
-    /* line-height: 3em; */
     overflow: hidden;
-    /* margin-top: 50%; */
 }
  
 #info_sec .info_content p 
@@ -272,6 +269,7 @@ h1, h2, h3
     background: url('../img/jump.jpg') no-repeat center center/cover;
     min-height: 970px;
     opacity: 0.9;
+    margin-top: -30px;
 }
 
 #info_about .container_1
@@ -307,13 +305,11 @@ h1, h2, h3
 }
 
 /* Testimonials */
-
 #testimonials 
 {
+    margin-top: -30px;
     height: 1000px;
     background-color: #444;
-    /* padding-top: 100px; */
-    /* opacity: 0.9; */
 }
   
 #testimonials h2 {
