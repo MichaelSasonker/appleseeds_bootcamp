@@ -1,0 +1,345 @@
+@font-face
+{
+    src: url(./GothamMedium.ttf);
+    font-family: GothamMedium;
+}
+
+@font-face
+{
+    src: url(./GothamBook.ttf);
+    font-family: GothamBook;
+}
+@font-face
+{
+    src: url(./GothamLightRegular.otf);
+    font-family: GothamLight;
+}
+@font-face
+{
+    src: url(./GothamBold.ttf);
+    font-family: GothamBold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'GothamMedium';
+    font-size: 14px;
+    color: #ffffff;
+
+}
+
+.scroll-container 
+{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-container section
+{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+a
+{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.first-page
+{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.first-img
+{
+    background: url(./img/model-3-hero-desktop.jpeg) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+/*----- First Page -----*/
+/*----- Nav-Bar -----*/
+
+#nav-bar .container .svg-logo 
+{
+    float: left;
+    margin: 20px;
+}
+
+#nav-bar .container ul
+{
+    list-style: none;
+    float: left;
+    margin: 20px;
+}
+
+#nav-bar .container .model-bar
+{
+    float:left;
+    margin-left: 25vw;
+}
+
+
+#nav-bar .container .model-2-bar
+{
+    float:right;
+}
+
+#nav-bar .container li
+{
+    display: inline-block;
+    padding: 5px 0 10px 10px;
+    margin: -3px 5px; 
+}
+
+/*----- center page -----*/
+
+.model3-header
+{
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 14vh;
+    left: 45.8vw;  
+}
+
+.car-info 
+{
+    position: absolute;
+    bottom: 8vh;
+    left: 31%;
+}
+
+.car-info div
+{
+    font-size: 28px;
+    display: inline-block;
+    text-align: center;  
+}
+
+.car-info .line
+{
+    font-family: 'GothamBook';
+    font-size: 70px;
+    font-weight: lighter;
+    display: inline-block;
+    margin: 0 10px;
+} 
+.car-info .order-btn
+{
+    float: right;
+    font-size: 12px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin-left: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.car-info .order-btn:hover
+{
+    background: whitesmoke;
+}
+
+.car-info .order-btn a:hover
+{
+    color: black;
+}
+
+.car-info .speed-p,
+.car-info .range-p,
+.car-info .motor-p
+{
+    font-size: 12px;
+    font-family: 'GothamBook';
+    padding: 10px 20px;
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.car-info .awd
+{
+    text-transform: uppercase;
+}
+
+.car-info .awd .motor-p
+{
+    text-transform: none ;
+}
+
+
+/*----- Second Page -----*/
+
+.second-img
+{
+    position: relative;
+    background: url(./img/model_3_safety_hero_mobile_2.png) no-repeat center center/cover;
+    height: 100vh;
+    width: 78%;
+    float: right;
+    margin-top: -7px ;
+      
+}
+
+.second-page #nav-bar .svg-logo_2
+{
+    position: relative;
+    top: 30px;
+    left: 20px;
+    filter: invert(80%) sepia(11%) saturate(377%) hue-rotate(179deg) brightness(94%) contrast(91%);
+}
+
+.second-page
+{
+    font-family: 'GothamMedium';
+    font-size: 14px;
+    color: black;
+}
+
+
+
+.second-page .left-info .safety
+{
+    color: #171A20;
+    font-size: 17px;
+    font-family: 'GothamLight';
+    position: relative;
+    top: 5vh;
+    left: -130px; 
+    margin-bottom: -20px;
+}
+
+.second-page .left-info .bulit-safety
+{
+    color: #171A20;
+    font-size: 28px;
+    font-family: 'GothamMedium';
+    font-weight: 100;
+    position: relative;
+    top: 7vh;
+    left: 50px;
+}
+
+.second-page .left-info p
+{
+    font-size: 14px;
+    font-family: 'GothamBook';
+    position: relative;
+    top: 9vh;
+    left: 50px;
+    color: #393C41;
+    text-align: left;
+    max-width: 17vw;
+    max-height: 20vh;
+    line-height: 1.5em;
+    padding: 0 0 14px;
+    margin: 0 0 16px;
+    font-weight: 300;
+}
+
+.second-page .left-info .rating
+{
+    background: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    display: block;
+    padding: 5px 5px;
+    border-radius: 20px;
+    position: relative;
+    top: 9vh;
+    left: 50px;
+    max-width: 17vw;
+    height: 30vh;
+}
+
+
+.second-page .left-info ul
+{
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    left: 13px;
+    right: 13px;
+}
+
+
+.second-page .left-info li
+{
+    font-family: 'GothamBold';
+    color: #393C41;
+    font-size: 14px;
+    position: relative;
+    left: 0;
+    padding: 2px;
+    line-height: 9px;
+}
+
+.second-page .left-info h3
+{
+    color: #171A20;
+    font-family: 'GothamMedium';
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    top: 0;
+    left: -10px;
+    margin-bottom: 15px; 
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.func .star
+{
+    font-size: 17px;
+    font-family: 'GothamMedium';
+    float: right;
+    margin-right: 30px;
+}
+
+.second-page .car-info
+{
+    position: relative;
+}
+.car-info .order-btn_2
+{
+    float: left;
+    font-size: 12px;
+    border: 3px solid #171A20;
+    border-radius: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+    position: relative;
+    left: -21vw;
+}
+
+.car-info .order-btn_2 a
+{
+    color: #171A20;
+}
+
+.car-info .order-btn_2:hover
+{
+    background: black;
+}
+
+.car-info .order-btn_2 a:hover
+{
+    color: whitesmoke;
+}
+
+/*********
+start with worD!!!!!!!
+
+
+******/
