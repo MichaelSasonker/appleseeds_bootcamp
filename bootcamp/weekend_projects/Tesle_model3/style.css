@@ -154,10 +154,7 @@ a
      margin-top: 14px;  
 } */
 
-.side-list a
-{
-    display: hidden;
-}
+
 .car-info 
 {
     position: absolute;
@@ -436,14 +433,14 @@ a
     color: whitesmoke;
 }
 
-.plus
+.car-info .plus
 {
     position: relative;
     top: -41px;
-    left: -670px;
+    left: -680px;
 }
 
-.plus .plus-img
+.car-info .plus .plus-img
 {
     width: 40px;
     height: 40px;
@@ -453,7 +450,7 @@ a
 
 }
 
-.plus a .learn
+.car-info .plus a .learn
 {
     font-family: 'GothamBook';
     font-size: 12px;
@@ -464,7 +461,7 @@ a
     top: -15px;
 }
 
-.plus img:hover
+.car-info .plus img:hover
 {
     background: black;
 }
@@ -664,6 +661,8 @@ a
     text-transform: uppercase;
     font-weight: 500;
     margin-left: 10px;
+    position: relative;
+    top: -15px;
 }
 
 .plus img:hover
