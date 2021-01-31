@@ -10,6 +10,9 @@
 !*.jpg
 !*.png
 !*.JPEG
+!*.svg
+!*.ttf
+!.otf
 ![Mn]akefuncs
 !*.sh
 !*.c
