@@ -17,11 +17,16 @@ body
 {
     display: flex;
     background: #f4f4f4;
-    border: 2px solid #474646; 
+    border: 1px solid #474646; 
     height: 7vh;
     padding: 20px;
     flex-direction: row;
     justify-content:space-between;
+}
+
+.nav-container .right-bar
+{
+    margin: -5px;
 }
 
 .nav-container .right-bar .link
@@ -36,3 +41,20 @@ body
     margin: 20px;
     color: #3b3a3a;
 } 
+
+@media (max-width: 768px)
+{
+    .nav-container
+    {
+        height: 45vh;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    
+    .nav-container .right-bar .link
+    {
+        display: block;
+        padding: 10px 10px;
+    }
+}
