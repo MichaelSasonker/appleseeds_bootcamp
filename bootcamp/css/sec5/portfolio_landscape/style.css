@@ -1,0 +1,51 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #aeedf8 ;
+    width: 100vw;
+}
+
+.h1_1
+{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.img1
+{
+    width: 153px;
+    height: 92%;
+    box-shadow: 8px 8px 7px rgb(65, 71, 71);
+}
+.h3_1
+{
+    font-family: 'Roboto', sans-serif;
+}
+.description1 
+{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.h4_1
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.follow1 ul
+{
+    list-style-type: circle;
+}
+
+@media (max-width: 768px)
+{
+    body
+    {
+        width: 50vw;
+        background-color: coral;
+        margin-left: 25vw;
+
+    }
+}
