@@ -50,11 +50,18 @@ body
         flex-direction: column;
         justify-content:space-evenly;
         align-items: center;
+        background: black;
+        color: orange;
     }
     
     .nav-container .right-bar .link
     {
         display: block;
         padding: 10px 10px;
+    }
+
+    .nav-container .right-bar a
+    {
+        color: orange;
     }
 }
