@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: grey;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    font-size: 2rem;
+    background: transparent; 
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 40px;
+    margin: 20px;
+    width: 14vw;
+    height: 14vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.translate {
+    position: relative;
+}
+
+.translate:hover {
+    animation: anim1;
+    animation-duration: 4s;
+}
+
+.translate::after {
+    content: '';
+    background: black;
+    position: absolute;
+    top: -2px;
+    left: -14vw;
+    width: 14vw;
+    height: 14vh;
+    transition: all 2s ease-in-out;
+    z-index: -1;
+}
+
+.translate:hover::after {
+    transform: translateX(14vw);
+}
+
+.translateY {
+    position: relative;
+}
+
+.translateY::after {
+    content: 'YEAH!';
+    text-align: center;
+    font-size: 3rem;
+    background: red;
+    position: absolute;
+    top: -14vh;
+    left: 0vw;
+    width: 14vw;
+    height: 14vh;
+    transition: all 2s ease-in-out;
+}
+
+.translateY:hover::after {
+    transform: translateY(14vh);
+}
+
+
+.rotate {
+    position: relative;
+    color: #000;
+}
+
+.rotate:hover {
+    animation: anim2;
+    animation-duration: 4s;
+}
+
+.rotate::after {
+    content: '';
+    background: yellow;
+    position: absolute;
+    transform: rotate(90deg);
+    top: -20.5vh;
+    left: -20.5vh;
+    width: 14vw;
+    height: 14vh;
+    transition: all 2s ease-in-out;
+    z-index: -1;
+}
+
+.rotate:hover::after {
+    transform: translate(10.5vw, 20.4vh);
+    
+}
+
+.scale {
+    position: relative;
+    width: 18vw;
+}
+
+.scale::after {
+    content: '';
+    background: transparent;
+    position: absolute;
+    top: -1.5px;
+    left: -1px;
+    width: 18vw;
+    height: 14vh;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+
+}
+
+.scale:hover::after {
+    content: 'SCALE & OPACITY';
+    z-index: 20;
+    
+    background: #000;
+    animation: anim3;
+    animation-duration: 1s;
+}
+
+
+@keyframes anim1 {
+    from {
+        color: #000;
+    }
+
+    to {
+        color: #fff;
+    }
+    
+}
+
+@keyframes anim2 {
+    from {
+        color: #fff;
+    }
+
+    to {
+        color: #000000;
+    }
+    
+}
+
+@keyframes anim3 {
+    from{
+        color: #000;
+        transform: scale(100);
+    }
+
+    to {
+        color: #fff;
+    }
+} 
+
