@@ -59,7 +59,6 @@ h3 {
 .parent .top-border::after {
     content: '';
     border: #000 5px solid;
-    /* display: flex; */
     width: 200px;
     position: absolute;
     top: -5px;
