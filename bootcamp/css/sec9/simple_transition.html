@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Transition</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #333;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background: crimson;
+            width: 400px;
+            height: 400px;
+
+        }
+
+        .box::before {
+            content: '';
+            background: darkorange;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 304px;
+            right: 360px;
+        }
+
+        .box:hover::before {
+            position: absolute;
+            background: forestgreen;
+            transform: translateX(-400px);
+            transition-duration: 3s;
+        }
+
+    </style>
+</head>
+<body>  
+
+    <div class="box"></div>
+    
+</body>
+</html>
