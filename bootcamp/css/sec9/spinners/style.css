@@ -7,23 +7,33 @@
 
 body {
     background-color: #000;
-    height: 100vh;        
+    min-height: 100vh;        
+    min-width: 100vw;        
     display: flex;
     align-items: center;
     justify-content: space-between;       
 }
    
-.spin {
+.spin-a {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border-top: solid 20px cyan;
-    border-right: solid 20px black;
+    border-top: solid 5px cyan;
+    border-right: solid 5px black;
     background-color: transparent; 
-    animation: anim1 1s linear infinite;
+    animation: rotate 1s linear infinite;
 }
 
-@keyframes anim1 {
+.spin-b {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid 5px gray;
+    border-top: solid 5px cyan;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
     100% {
     transform: rotate(360deg); 
     }
