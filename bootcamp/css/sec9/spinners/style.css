@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;        
+    display: flex;
+    align-items: center;
+    justify-content: space-between;       
+}
+   
+.spin {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-top: solid 20px cyan;
+    border-right: solid 20px black;
+    background-color: transparent; 
+    animation: anim1 1s linear infinite;
+}
+
+@keyframes anim1 {
+    100% {
+    transform: rotate(360deg); 
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    background-color: turquoise;
+    border-radius: 50%;
+}
+
+.one-a {
+    animation: anim2 infinite 3s;
+}
+
+.two-a {
+    animation: anim2 infinite 3s;
+    animation-delay: 1s;
+}
+
+.three-a {
+    animation: anim2 infinite 3s;
+    animation-delay: 2s;
+}
+
+
+@keyframes anim2 {
+    50% {
+        transform: background; 
+        background-color: blue; 
+    }
+}
+
+.one-b {
+    animation: anim3 infinite 0.9s;
+}
+
+.two-b {
+    animation: anim3 infinite 0.9s;
+    animation-delay: 0.3s;
+}
+
+.three-b {
+    animation: anim3 infinite 0.9s;
+    animation-delay: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes anim3{
+    30% {
+        transform: translateY(-100px); 
+    }
+    60% {
+        transform: translateY(0px); 
+        transform: background; 
+        background-color: blue; 
+    }
+}
