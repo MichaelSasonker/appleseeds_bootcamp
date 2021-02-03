@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Basics - 2 Exercise</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #333;
+            height: 100vh;
+        }
+
+        .item {
+            border: #f4f4f4 solid 2px;
+            border-radius: 20px;
+            padding: 5rem;
+            margin: 2rem;
+        }
+
+        .header .item-1 {
+            background: red;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            grid-template-rows: 500px;
+        }
+
+        main .item-2 {
+            background: blue;
+        }
+
+        .main-child-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 270px;
+        }
+        .item-3 {
+            background: green;
+        }
+
+        .item-4 {
+            background: purple;
+        }
+
+        .item-5 { 
+            background: yellow;
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="item item-1"></div>
+    </div>
+    <main>
+        <div class="item item-2"></div>
+        <div class="main-child-2">
+            <div class="item item-3"></div>
+            <div class="main-child-3">
+                <div class="item item-4"></div>
+                <div class="item item-5"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
