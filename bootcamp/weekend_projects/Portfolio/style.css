@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
 
 * {
     margin: 0;
@@ -9,55 +10,228 @@ body {
     background: #333;
     color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
-    font-weight: 1.2rem;
+    /* line-height: 1.5rem; */
 }
 
-#home {
+/***** home-page *****/
+#home, #about {
     height: 100vh;
     width: 100%;
     font-size: 1.5rem;
+}
+
+.container {
+    position: relative;
 }
 
 .container .img1 {
     background: url(./images/star.jpg) no-repeat center center/cover;
     height: 100vh;
     width: 100%;
-    z-index: -1;
+    z-index: -10;
     opacity: 0.7;
+    position: relative;
 }
 
+/***** nav-bar *****/
 .nav-bar {
-    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    height: 8vh;
     width: 100%;
     background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
     background: transparent;
     position: fixed;
     top: 0;
     left: 0;
+    padding: 0 30px;
+    margin-top: 15px;
 }
 
-ul {
+/* .nav-bar.top {
+    background: transparent;
+}
+
+.nav-bar a {
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.nav-bar a:hover {
+    border-bottom: #28a745 2px solid;
+} */
+
+.logo > a {
+    color: #f7c08a;
+    position: relative;
+    font-size: 3rem;
+}
+
+.nav-bar ul {
     list-style: none;
-    max-width: 30vw;
-    display: inline-flex;
+    display: flex;
 }
 
 li {
-    margin: 0 20px;
+    margin: 20px 40px;
+    padding: 10px 30px; 
 }
 
 a {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+    position: relative;
 }
 
-.nav-bar ul li a:hover, 
-.nav-bar ul li a.current {
-  /* background: #444; */
+a:hover {
+    animation: size-inc 1s ease-out;
+    color: #f7c08a;
+}
+
+.nav-bar .current {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 2px solid #f7c08a;
+    padding-bottom: 5px;
+}
+
+a.current:hover {
+
   color: #f7c08a;
+  animation: curr 1s ease-out;
+}
+
+/***** main content *****/
+.main-cont {
+    height: 90vh;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.main-cont .left-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 40vw;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    top: -50px;
+    /* margin: 100px 30px ; */
+}
+
+.left-cont .face-img {
+    background: url(./images/man1.jpg) no-repeat center center/cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    left: 220px;
+    /* margin-bottom: 10vh; */
+}
+
+/* TODO: check!!!! */
+/* .left-cont .face-img::after {
+    content: '';
+    width: 305px;
+    height: 305px;
+    position: absolute;
+    left: 148px;
+    top: 248px;
+    z-index: -1;
+    border-radius: 50%;
+    border-top: solid 10px orange;
+    border-right: solid 5px transparent;
+    background-color: transparent; 
+    animation: rotate 1s linear infinite;  
+} */
+
+.left-cont .sentence {
+    font-size: 2.4rem;
+    font-family: 'Crimson Text', serif;
+    line-height: 4rem;
+}
+
+.sentence .spec-word {
+    color: #f7c08a;
+    font-weight: bold;
+}
+
+.sentence .writer {
+   text-decoration: underline; 
+   text-decoration-color: #f7c08a;
+}
+
+.main-cont .right-cont {
+    font-size: 3rem;
+    font-weight: 300;
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: -100px;    
+}
+
+.right-cont span {
+    color: #f7c08a;
+}
+
+/***** second page *****/
+
+.container .img2 {
+    background: url(./images/broke.jpg) no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+    opacity: 0.4;
+    position: relative;
+} 
+
+
+#about .left-cont {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+}
+
+
+/***** keyframes *****/
+
+/***** nav-bar animations *****/
+
+@keyframes size-inc {
+    to {
+        font-size: 2.1rem;   
+    }
+}
+
+@keyframes curr {
+    to {
+        font-size: 2.1rem;
+        border: none;   
+    }
+}
+
+@keyframes rotate {
+    100% {
+    transform: rotate(360deg); 
+    }
 }
