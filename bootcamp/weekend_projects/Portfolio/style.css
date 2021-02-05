@@ -194,24 +194,140 @@ a.current:hover {
 /***** second page *****/
 
 .container .img2 {
-    background: url(./images/broke.jpg) no-repeat center center/cover;
+    background: url(./images/earth-1272884_1280.jpg) no-repeat center center/cover;
     height: 100vh;
     width: 100%;
     z-index: -10;
-    opacity: 0.4;
+    opacity: 0.6;
     position: relative;
 } 
 
-
+#about .right-cont,
 #about .left-cont {
-    height: 80vh;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-between;
+    height: 80%;
+    width: 40vw;
+    margin: 0 20px;
 }
 
+.left-cont .summery {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: center;
+    text-align: left;
+    height: 80%;
+}
+
+.summery h1 {
+    font-size: 4rem;
+    color: #f7c08a;
+    font-weight: 200;
+    margin-bottom: 30px;
+    
+}
+
+.summery p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 100%;
+}
+
+#about .right-cont {
+    font-size: 2rem;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    background: #f4f4f4;
+    color: #333;
+
+}
+
+#about .right-cont h1 {
+    color: #333;
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.top-cont .seismicai {
+    margin-left: -40px;
+    display: grid;
+    grid-template-areas: 
+    'logo logo logo header header'
+    'logo logo logo header header'
+    'logo logo logo sen sen'
+    'logo logo logo sen sen';
+}
+
+.top-cont .seismicai-logo {
+    grid-area: logo;
+    margin-left: 100px;
+}
+
+.top-cont .seismicai .tit {
+    grid-area: header;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.top-cont .sen {
+    grid-area: sen;
+    color: #333;
+    margin-left: 30px;
+}
+
+.top-cont img {
+    margin: 20px 30px;
+}
+
+.top-cont .amdocs {
+    margin-left: -40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.amdocs .amdocs-logo {
+    height: 50px;
+}
+
+.bottom-cont  > h1 {
+    text-align: center;
+}
+
+.education-items {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;    
+}
+
+.education-items > div {
+    padding: 0 20px;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.bar-ilan-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.rtg-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.apple-logo {
+    width: 250px;
+    height: 100px;
+}
 
 /***** keyframes *****/
 
