@@ -10,14 +10,28 @@ body {
     background: #333;
     color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
-    /* line-height: 1.5rem; */
+    height: 100vh;
 }
+
+.scroll-container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.scroll-container #home,
+.scroll-container #about,
+.scroll-container #skills-page
+.scroll-container #contact {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
 
 /***** home-page *****/
 #home, #about {
     height: 100vh;
     width: 100%;
     font-size: 1.5rem;
+    position: relative;
 }
 
 .container {
@@ -50,20 +64,6 @@ body {
     margin-top: 15px;
 }
 
-/* .nav-bar.top {
-    background: transparent;
-}
-
-.nav-bar a {
-    color: #fff;
-    padding: 10px 20px;
-    margin: 0 5px;
-}
-
-.nav-bar a:hover {
-    border-bottom: #28a745 2px solid;
-} */
-
 .logo > a {
     color: #f7c08a;
     position: relative;
@@ -87,23 +87,9 @@ a {
     position: relative;
 }
 
-a:hover {
+.nav-bar a:hover {
     animation: size-inc 1s ease-out;
     color: #f7c08a;
-}
-
-.nav-bar .current {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    border-bottom: 2px solid #f7c08a;
-    padding-bottom: 5px;
-}
-
-a.current:hover {
-
-  color: #f7c08a;
-  animation: curr 1s ease-out;
 }
 
 /***** main content *****/
@@ -128,34 +114,37 @@ a.current:hover {
     text-align: center;
     position: relative;
     top: -50px;
-    /* margin: 100px 30px ; */
+    left: -40px;
 }
 
 .left-cont .face-img {
-    background: url(./images/man1.jpg) no-repeat center center/cover;
+    background: url(./images/Head2\(1\).jpg) no-repeat center center/cover;
     height: 300px;
     width: 300px;
     border-radius: 50%;
     position: relative;
     left: 220px;
-    /* margin-bottom: 10vh; */
 }
 
-/* TODO: check!!!! */
-/* .left-cont .face-img::after {
+.left-cont .face-img::after {
     content: '';
     width: 305px;
     height: 305px;
     position: absolute;
-    left: 148px;
-    top: 248px;
+    left: -5px;
+    top: -7px;
     z-index: -1;
     border-radius: 50%;
     border-top: solid 10px orange;
     border-right: solid 5px transparent;
     background-color: transparent; 
-    animation: rotate 1s linear infinite;  
-} */
+    animation: rotate 1s linear infinite;
+    display: none;  
+}
+
+.left-cont .face-img:hover::after {
+    display:initial;
+}
 
 .left-cont .sentence {
     font-size: 2.4rem;
@@ -191,7 +180,34 @@ a.current:hover {
     color: #f7c08a;
 }
 
-/***** second page *****/
+#home .container .footer {
+    position: absolute;
+    bottom: 100px;
+    left: 40vw;
+}
+#home .container .btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #222;
+    font-size: 1.5rem;
+    background-color: #f7c08a;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home .container .btn:hover {
+    opacity: 0.9;
+
+}
+
+/***** About-page *****/
 
 .container .img2 {
     background: url(./images/earth-1272884_1280.jpg) no-repeat center center/cover;
@@ -234,70 +250,75 @@ a.current:hover {
 
 #about .right-cont {
     font-size: 2rem;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    text-align: left;
-    background: #f4f4f4;
-    color: #333;
-
 }
 
-#about .right-cont h1 {
-    color: #333;
-    font-size: 4rem;
-    font-weight: 200;
-    margin-bottom: 30px;
+.top-cont {
+    margin-top: 100px ;
+}
+
+.top-cont h1 {
+    color: #f7c08a;
+    text-align: left;
+    font-size: 3rem;
+    padding: 30px;
+    font-weight: 100;
 }
 
 .top-cont .seismicai {
-    margin-left: -40px;
     display: grid;
-    grid-template-areas: 
-    'logo logo logo header header'
-    'logo logo logo header header'
-    'logo logo logo sen sen'
-    'logo logo logo sen sen';
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
 }
 
-.top-cont .seismicai-logo {
-    grid-area: logo;
-    margin-left: 100px;
+.top-cont .seismicai span {
+    color: #fff;
 }
 
-.top-cont .seismicai .tit {
-    grid-area: header;
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-.top-cont .sen {
-    grid-area: sen;
-    color: #333;
-    margin-left: 30px;
-}
-
-.top-cont img {
-    margin: 20px 30px;
+.top-cont .seismicai a img {
+    height: 100px;
+    width: 100px;
 }
 
 .top-cont .amdocs {
-    margin-left: -40px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    justify-content: flex-start;
+    margin: 20px 0;
 }
 
-.amdocs .amdocs-logo {
-    height: 50px;
+.top-cont .amdocs span {
+    color: #fff;
+}
+
+.top-cont .amdocs a img {
+    height: 100px;
+    width: 200px;
+    margin-right: 30px;
+}
+
+.top-cont .amdocs span {
+    margin-left: 55px ;
+}
+
+.bottom-cont {
+    position: relative;
+    top: -60px;
 }
 
 .bottom-cont  > h1 {
     text-align: center;
+    color: #f7c08a;
+    margin-bottom: 30px; 
+    font-size: 3rem;
+    font-weight: 100;
 }
 
 .education-items {
@@ -310,10 +331,11 @@ a.current:hover {
 
 .education-items > div {
     padding: 0 20px;
-    border: 2px solid #333;
-    border-radius: 20px;
 }
 
+.education-items img {
+    margin-bottom: 20px;
+}
 .bar-ilan-logo {
     width: 100px;
     height: 100px;
@@ -327,6 +349,185 @@ a.current:hover {
 .apple-logo {
     width: 250px;
     height: 100px;
+}
+
+
+/***** Skills-page *****/
+
+#skills-page {
+    background: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+}
+
+#skills-page h1 {
+    color: #f7c08a;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#skills-page body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#skills-page .container {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px
+}
+
+#skills-page .container .box {
+    background: #333;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+
+}
+
+#skills-page .container .box:hover {
+    background: #f7c08a;
+    color: #000;
+}
+
+#skills-page .box i {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+#skills-page .box:nth-child(1) {
+    grid-column: span 2;
+}
+
+#skills-page .box:nth-child(2) {
+    grid-row: span 2;
+}
+
+#skills-page .box:nth-child(3) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#skills-page .box:nth-child(4) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#skills-page .box:nth-child(5) {
+    grid-column: span 2;
+}
+
+#skills-page .box:nth-child(6) {
+    grid-column: span 2;
+}
+
+#skills-page .box:nth-child(7) {
+    grid-row: span 2;
+}
+
+#skills-page .box:nth-child(8) {
+    grid-column: span 2;
+}
+
+
+/***** contact-page *****/
+
+#contact {
+    height: 100vh;
+    width: 100%;
+    background: url(./images/space1.jpg) no-repeat center center/cover;
+}
+ 
+#contact .main-cont-container {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#contact h1 {
+     font-size: 4rem;
+     font-weight: 100;
+     margin: 30px 0;
+     color: #f7c08a;
+}
+
+#contact .form-control {
+    font-size: 2rem;
+}
+
+#contact .form-control label {
+    color: #f7c08a;
+}
+
+#contact .form-control input {
+    margin: 20px 0;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+#contact .btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #222;
+    font-size: 1.5rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    width: 200px;
+    position: relative;
+    left: 65px;
+}
+
+#contact .btn:hover {
+    opacity: 0.9;
+    background: #f7c08a;
+
+}
+
+#contact .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+}
+
+#contact .footer a {
+    color: #fff;
+}
+
+#contact .footer .social > * {
+    margin-right: 30px;
+}
+
+#contact .footer a:hover:nth-child(1) {
+    color: rgb(72, 103, 170);
+}
+
+#contact .footer a:hover:nth-child(2) {
+    color: rgb(36, 41, 46);
+}
+
+#contact .footer a:hover:nth-child(3) {
+    color: rgb(32, 102, 194);
 }
 
 /***** keyframes *****/
