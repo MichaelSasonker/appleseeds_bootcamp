@@ -12,7 +12,8 @@
 !*.JPEG
 !*.svg
 !*.ttf
-!.otf
+!*.otf
+!*.webp
 ![Mn]akefuncs
 !*.sh
 !*.c
