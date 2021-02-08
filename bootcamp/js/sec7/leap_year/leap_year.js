@@ -1,5 +1,5 @@
 /*****************************************************************************
-* File Name: leap_year.js                                                   *
+* File Name: leap_year.js                                                    *
 * Section: 7                                                                 *
 * Developer: Michael Sasonker                                                *
 * Date: 02/08/21 13:10                                                       *
@@ -44,7 +44,7 @@ function MainFunction()
 
     let year = window.prompt('Please enter the year: ');
     year = parseInt(year);
-    
+
     IsLeapYear(year);
 
 }; MainFunction();
