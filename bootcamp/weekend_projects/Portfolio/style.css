@@ -191,6 +191,7 @@ a {
     bottom: 100px;
     left: 40vw;
 }
+
 #home .container .btn {
     cursor: pointer;
     display: inline-block;
@@ -290,6 +291,11 @@ a {
 .top-cont .seismicai a img {
     height: 100px;
     width: 100px;
+    transition: all 1s;
+}
+
+.top-cont .seismicai-logo:hover {
+    transform: rotate(360deg);
 }
 
 .top-cont .amdocs {
@@ -308,6 +314,11 @@ a {
     height: 100px;
     width: 200px;
     margin-right: 30px;
+    transition: all 1s;
+}
+
+.top-cont .amdocs-logo:hover {
+    transform: scale(-2);
 }
 
 .top-cont .amdocs span {
@@ -342,21 +353,36 @@ a {
 .education-items img {
     margin-bottom: 20px;
 }
+
 .bar-ilan-logo {
     width: 100px;
     height: 100px;
+    transition: all 1s;
+}
+
+.bar-ilan-logo:hover {
+    transform: rotate(360deg);
 }
 
 .rtg-logo {
     width: 100px;
     height: 100px;
+    transition: all 1s;
+}
+
+.rtg-logo:hover {
+    transform: skew(45deg);
 }
 
 .apple-logo {
     width: 250px;
     height: 100px;
+    transition: all 1s;
 }
 
+.apple-logo:hover {
+    transform: scale(2);
+}
 
 /***** Skills-page *****/
 
@@ -446,6 +472,31 @@ a {
 
 #skills-page .box:nth-child(8) {
     grid-column: span 2;
+}
+
+#skills-page .footer {
+    align-self: center;
+} 
+
+#skills-page .footer .btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #222;
+    font-size: 1.5rem;
+    background-color: #f7c08a;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#skills-page .footer .btn:hover {
+    opacity: 0.9;
 }
 
 
