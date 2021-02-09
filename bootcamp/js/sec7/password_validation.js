@@ -36,14 +36,7 @@ function CheckCapitalLetter(str)
         }
     }
     
-    return (flag);
-
-    // ( str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90 )
-    // ?
-    //     flag = 1 
-    // :
-    //     flag = 0
-        
+    return (flag);      
 }
 
 /*---------------------------------------------------------------------------*/
@@ -74,9 +67,6 @@ function MainFunction()
 
     password = 'AbcA';
     StrongerPasswordValidation(password);
-    
-    // (if (password.length >= 7) { for(i) { if (password[i].charCodeAt(i) { console.log('stronger')} else console.log('strong'))}} 
-    // else console.log('weak'); 
 
     password = 'BAaaaaaaaa';
     StrongerPasswordValidation(password);
