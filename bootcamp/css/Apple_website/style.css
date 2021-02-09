@@ -1,0 +1,443 @@
+@font-face {
+    src: url(./fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+    font-family: SFProDisplay;
+}
+
+@font-face {
+    src: url(./fonts/FontsFree-Net-SFProText-Regular.ttf);
+    font-family: SFProText;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 17px;
+    font-family: 'SFProText';
+    background: #fbfbfd;
+    width: 100%;
+}
+
+
+/***** first-page *****/
+#first-page {
+    position: relative;
+    height: 70vh;
+}
+
+/***** navbar *****/
+.navbar-container {
+    height: 48px;
+    max-height: 44px;
+    width: 100%;
+    background: #333;
+}
+
+.navbar-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-container li {
+    list-style: none;
+    display: inline;
+    margin: 0 30px;
+    align-self: center;
+}
+
+.navbar-container a {
+    text-decoration: none;
+    color: #d7d7d7;
+    text-align: center;
+    letter-spacing: normal;
+    padding: 0 10px;
+    font-size: 14px;
+
+}
+
+.navbar-container a:hover {
+    color: #fbfbfd;
+}
+
+.covid {
+    background: #0071e3;
+    padding: 12px;
+    margin-top: 0;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.covid a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.covid a:hover {
+    color: #fbfbfd;
+    text-decoration: underline;
+}
+
+.covid a span:hover {
+    text-decoration: none;
+}
+
+.shop {
+    background: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.shop .shop-content {
+    width: 790px;
+    font-size: 14px;
+    line-height: 1.4rem;
+
+}
+
+.shop a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.shop a:hover {
+    text-decoration: underline;
+}
+
+.main-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-section .apple-tv {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-section .apple-tv img {
+    height: 70px;
+    width: 120px;
+    font-size: 48px;
+    letter-spacing: -0.002em;
+}
+
+.main-section .main-img figure{
+    width: 529px;
+    height: 484px;
+    background-size: 529px 484px;
+    background-repeat: no-repeat;
+    background-image: url(./img/hero_snoopy__nv49iktwrney_largetall.jpg);
+}
+
+.apple-tv .title {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 32px;
+}
+
+.main-section figure .btn-container {
+    background: #000;
+    height: 60px;
+    width: 180px;
+    border-radius: 45px;
+    text-align: center;
+    position: relative;
+    top: 410px;
+    left: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-section figure .btn-container a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-section figure .btn-container a:hover {
+    text-decoration: underline;
+}
+ 
+#first-page .space {
+    position: relative;
+    top: -30px;
+    background: #fff;
+    height: 15px;
+} 
+
+/***** second-page *****/
+
+#second-page {
+    position: relative;
+    top: 150px;
+    height: 70vh;
+    width: 100%;
+    background: #fbfbfd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#second-page:hover {
+    cursor: pointer;
+}
+
+#second-page h2 {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600px;
+    letter-spacing: -.002em;
+    color: #1d1d1f;
+    margin: 20px 0 ;
+}
+
+#second-page h3 {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: SFProDisplay;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+#second-page .content {
+    text-align: center;
+    display: block;
+    margin-top: .8em;
+    margin-bottom: 10px;
+    color: #86868b;
+    margin-top: 0.4em;
+}
+
+#second-page .content p {
+    margin-bottom: 5px;
+}
+
+#second-page .links a {
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    font-family: 'SFProDisplay';
+    color: #06c;
+    margin: 10px 20px;
+}
+
+#second-page .iphone-img {
+    width: 100%;
+    height: 600px;
+    background-size: 500px 230px;
+    background-repeat: no-repeat;
+    background-image: url(./img/iphone__cyamwsdph26a_largetall.jpg);
+    position: relative;
+    left: 35.6%;
+    top: 170px;
+}
+
+#second-page .space {
+    position: relative;
+    top: -80px;
+    background: #fff;
+    height: 15px;
+} 
+
+/***** third-page *****/
+
+#third-page {
+    position: relative;
+    top: 150px;
+    height: 70vh;
+    width: 100%;
+    background: #fbfbfd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#third-page:hover {
+    cursor: pointer;
+}
+
+#third-page h2 {
+    font-size: 56px;
+    line-height: 1.08349;
+    font-weight: 600px;
+    letter-spacing: -.002em;
+    color: #1d1d1f;
+    margin: 10px 0 ;
+}
+
+#third-page h3 {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: SFProDisplay;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+#third-page .links a {
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    font-family: 'SFProDisplay';
+    color: #06c;
+    margin: 10px 20px;
+}
+
+#third-page .snoopy-ipad {
+    width: 905px;
+    height: 510px;
+    background-size: 905px 510px;
+    background-repeat: no-repeat;
+    background-image: url(./img/ipad_snoopy__bge83mwgcaoi_largetall.jpg);
+    position: relative;
+    left: 25%;
+    top: 0;
+}
+
+#third-page .space {
+    position: relative;
+    top: 40px;
+    background: #fff;
+    height: 15px;
+} 
+
+/***** fourth-page *****/
+
+#fourth-page {
+    position: relative;
+    top: 150px;
+    height: 70vh;
+    width: 100%;
+    background: #fbfbfd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#fourth-page:hover {
+    cursor: pointer;
+}
+
+#fourth-page h2 {
+    font-size: 56px;
+    line-height: 1.08349;
+    font-weight: 600px;
+    letter-spacing: -.002em;
+    color: #1d1d1f;
+    margin: 5px 0 ;
+}
+
+#fourth-page .links a {
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    font-family: 'SFProDisplay';
+    color: #06c;
+    margin: 10px 20px;
+}
+
+#fourth-page .mini-pod {
+    width: 905px;
+    height: 510px;
+    background-size: 905px 510px;
+    background-repeat: no-repeat;
+    background-image: url(./img/homepod_snoopy__d3tmfyyxonu6_largetall.jpg);
+    position: relative;
+    left: 25%;
+    top: 0;
+}
+
+#fourth-page .space {
+    position: relative;
+    top: 40px;
+    background: #fff;
+    height: 15px;
+} 
+
+
+/***** fifth-page *****/
+
+#fifth-page {
+    position: relative;
+    top: 150px;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#fifth-page:hover {
+    cursor: pointer;
+}
+
+#fifth-page h2 {
+    font-size: 56px;
+    line-height: 1.08349;
+    font-weight: 600px;
+    letter-spacing: -.002em;
+    color: #1d1d1f;
+    margin: 10px 0 ;
+}
+
+#fifth-page h3 {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: SFProDisplay;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#fifth-page .links a {
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    font-family: 'SFProDisplay';
+    color: #06c;
+    margin: 10px 20px;
+}
+
+#fifth-page .tv-4k {
+    width: 905px;
+    height: 510px;
+    background-size: 905px 510px;
+    background-repeat: no-repeat;
+    background-image: url(./img/tv4k_snoopy__esd65v7pg6ie_largetall.jpg);
+    position: relative;
+    left: 25%;
+    top: 0;
+}
+
+#fifth-page .space {
+    position: relative;
+    top: 550px;
+    background: #fff;
+    height: 15px;
+}
