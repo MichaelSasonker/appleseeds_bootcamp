@@ -24,10 +24,13 @@ const PrintArr = (arr) => {
 /*---------------------------------------------------------------------------*/
 /* This function return the legth of an array */
 const ArrayLength = (arr) => {
-    let size_arr = 0
-    for (let i = 0; i < arr.length; ++i)
+    let size_arr = 0;
+    let i = 0;
+
+    while (arr[i] != undefined)
     {
         ++size_arr;
+        ++i;
     }
 
     return (size_arr);
@@ -60,7 +63,6 @@ const ArrayMultiplication = (arr) => {
 function MainFunction()
 {
     'use strict';
-
 
     PrintArr(ARR);
     console.log(ArrayLength(ARR));
