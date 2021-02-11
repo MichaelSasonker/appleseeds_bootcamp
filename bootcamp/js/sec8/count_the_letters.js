@@ -72,6 +72,6 @@ function MainFunction()
     console.log(res_obj);
 
     let max_index = FindMaxValue(res_obj);
-    console.log('The maximum value is: ' + res_obj);
+    console.log('The maximum value is: ' + res_obj[max_index]);
 
 }; MainFunction();
