@@ -90,6 +90,4 @@ function MainFunction()
     console.log(CANDYSTORE.candies + ' ' + CANDYSTORE.cashRegister);
 
 
-
-
 }; MainFunction();
