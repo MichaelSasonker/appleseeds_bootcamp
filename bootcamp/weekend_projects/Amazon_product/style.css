@@ -516,7 +516,6 @@ a:hover {
     display:initial
 }
 
-
 .main-page .left-sec .big-pic img {
     width: 440px;
     height: 440px;
@@ -636,7 +635,7 @@ a:hover {
 }
 
 .details-sec .new {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .details-sec .new a {
     color: #007185;
@@ -649,7 +648,7 @@ a:hover {
 .main-page .right {
     border: 1px solid #ccc;
     border-radius: 10px;
-    height: 93%;
+    height: 95%;
     width: 400px;
     padding: 15px 20px ;
 }
@@ -818,11 +817,162 @@ a:hover {
     border: 0.5px solid #ccc;
     padding-left: 10px;
     font-size: 14px;
+    position: relative;
+
 }
 
 hr {
-    width: 64%;
+    width: 63%;
     margin: 0 230px;
     border-top: 0.5px solid #ccc;
     border-radius: 1px;
+    position: relative;
+    top: 10px;
+    left: -10px;
 }
+
+.under-main {
+    height: 33vh;
+    width: 64%;
+    margin-left: 220px;
+    margin-top: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.under-main .title {
+    font-size: 18px;
+    color: #cc6600;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+
+.under-main .package {
+    height: 15vh;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.under-main .package div {
+    display: inline-block;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.under-main .package .plus span {
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    top: -45px;
+    color: #565959;
+}
+
+.under-main .package .buttons div {
+    position: relative;
+    top: -40px;
+    display: block;
+    align-self: center;
+    margin-bottom: 7px;
+}
+
+.under-main .package .price {
+    color: #706863;
+}
+
+.under-main .package .price .red {
+    font-size: 18px;
+    color: #b12713;
+}
+
+.under-main .package .line2 button {
+    background: #F3CE74;
+    font-size: 13px;
+    font-weight: 100;
+    width: 110px;
+    height: 20px;
+    padding: 1px;
+    border-radius: 4px;
+    border: 0.1px solid #706863;
+    cursor: pointer;
+}
+
+.under-main .package .line3 button {
+    font-size: 13px;
+    font-weight: 100;
+    width: 110px;
+    height: 20px;
+    padding: 1px;
+    border-radius: 4px;
+    border: 0.1px solid #706863;
+    cursor: pointer;
+}
+
+.under-main .line_1,
+.under-main .line_2,
+.under-main .line_3 {
+    margin-left: 10px;
+    align-items: center;
+    color: #0F1111;
+    margin: 10px;
+}
+
+.under-main .line_1 {
+    margin-top: -10px;
+}
+
+.under-main .line_1 .sign1 {
+    background: #1196AB;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.under-main .line_1 a {
+    color: #1196AB;
+}
+
+.under-main .line_2 input,
+.under-main .line_3 input {
+    height: 14px;
+    width: 14px;
+    margin-right: 9px;
+    margin-left: 2px;
+}
+
+.under-main .line_2 .bold {
+    font-weight: 700;
+}
+
+.under-main .line_2 .red,
+.under-main .line_3 .red {
+    color: #b12713;
+}
+
+.under-main .line_3 a {
+    color: #1196AB;
+} 
+
+.right-side {
+    height: 33vh;
+    width: 265px;
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
+    float: right;
+    position: relative;
+    top: -330px;
+    right: 195px;
+}
+
+
+
+
+
+
