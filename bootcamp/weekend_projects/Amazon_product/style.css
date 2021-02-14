@@ -711,21 +711,113 @@ a:hover {
     text-align: center;
     align-items: center;
     font-size: 14px;
-    border: 1px solid #232f3e;
+    border: 0.5px solid #232f3e;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 40px 1fr;
+    margin-bottom: 10px;
 }
+
 
 .main-page .right .addto span {
     background: #0F1111;
-    width: 30px;
+    width: 25px;
 }
 
 .main-page .right .addto img {
-    width: 25px;
+    width: 22px;
     background: #0F1111;
     text-align: center;
+}
+
+.main-page .right .buy button {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    background: #f0a548;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    border: 0.5px solid #232f3e;
+    border-radius: 5px;
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.main-page .right .buy span {
+    background: #0F1111;
+    width: 25px;
+}
+
+.main-page .right .buy span i {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(334deg) brightness(106%) contrast(102%);
+}
+
+.main-page .right .secure {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+
+.main-page .right .secure img {
+    width: 12px;
+}
+
+.main-page .right .secure a {
+    color: #007185;
+    margin-left: 10px;
+}
+
+.main-page .right .ship {
+    color: #706863;
+    margin-bottom: 10px;
+}
+
+.main-page .right .ship .black,
+.main-page .right .ship .black2 {
+    color: #0F1111;
+    margin-left: 20px;
+}
+
+.main-page .right .ship .black2 {
+    margin-left: 41px;
+}
+
+.main-page .right .checkbox {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    text-align: center;
+    align-items: center;
+    border-bottom: 0.5px solid #ccc;
+    border-radius: 1px;
+}
+
+.main-page .right .checkbox label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.main-page .right .deliver {
+    margin-bottom: 10px;
+}
+
+.main-page .right .deliver a {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    color: #007185;
+    font-size: 12px;
+    border-bottom: 0.5px solid #ccc;
+    border-radius: 1px;
+}
+
+.main-page .right .add-to-list button {
+    width: 220px;
+    height: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    background: #edeff2;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    padding-left: 10px;
+    font-size: 14px;
 }
 
 hr {
