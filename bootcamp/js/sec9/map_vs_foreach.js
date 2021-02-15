@@ -60,11 +60,12 @@ let GetIdAndNameWithForeach = (arr, dest_arr) => {
 /*---------------------------------------------------------------------------*/
 /* This function gets the id and name from an array of objects and save it 
    in a new array using map                                                 */
-let GetIdAndNameWithMap = (arr, dest_arr) => {
-    dest_arr = arr.map(element => {
+let GetIdAndNameWithMap = (arr) => {
+    let dest_arr = arr.map(element => {
         return ({id: element.id, name: element.title});
-    })
-    console.log(dest_arr);
+    });
+
+    return (dest_arr);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -78,7 +79,7 @@ function MainFunction()
     GetIdAndNameWithForeach(NEW_REALESES, dest_arr);
     console.log(dest_arr);
     
-    let dest_arr2 = [];
-    GetIdAndNameWithMap(NEW_REALESES, dest_arr2);
+    let dest_arr2 = GetIdAndNameWithMap(NEW_REALESES);
+    console.log(dest_arr2);
 
 }; MainFunction();
