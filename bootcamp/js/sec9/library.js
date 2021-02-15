@@ -1,5 +1,5 @@
 /*****************************************************************************
-* File Name: massaging_data_with_map.js                                      *
+* File Name: library.js                                                      *
 * Section: 9                                                                 *
 * Developer: Michael Sasonker                                                *
 * Date: 02/15/21 23:00                                                       *
