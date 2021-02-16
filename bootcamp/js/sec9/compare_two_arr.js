@@ -55,4 +55,5 @@ function MainFunction()
     console.log('ArrCmp second result:');
     console.log(ArrCmp(FOODS1, FOODS3));
     console.log('');
+    
 }; MainFunction();
