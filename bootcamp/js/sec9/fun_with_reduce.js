@@ -8,10 +8,14 @@
 
 const ARR = [10, 200, -3, 2, 0, 82, 178, -2, 2001];
 
+/*---------------------------------------------------------------------------*/
+/* Main function that runs the program */ 
 function MainFunction()
 {
     'use strict';
 
+  /*---------------------------------------------------------*/
+    /* This function return the maximum value using reduce */ 
     let MaxFunc = (max, current_val) => {
         if (max <= current_val)
         {
@@ -22,6 +26,8 @@ function MainFunction()
     console.log('MaxFuc result:');
     console.log(ARR.reduce(MaxFunc, ARR[0]));
 
+
+    /* This function return the sum using reduce */
     let SumEven = (sum, current_val) => {
         /* if (current_val % 2 === 0) -> sum += current_val; -> return (sum); */
         return ((current_val %2 === 0) ? sum += current_val : sum)
@@ -30,10 +36,11 @@ function MainFunction()
     console.log('SumEven result:');
     console.log(ARR.reduce(SumEven, 0));
 
+
     console.log('Avg result:');
+    /* This function return the average value using reduce */
     console.log(ARR.reduce((sum, current_val) => {
         return (sum + current_val);
     }, 0) / ARR.length);
-
 
 }; MainFunction();
