@@ -8,9 +8,8 @@
 
 
 function getSum(arr1, arr2)
-{
-    /* sum is const so we can't change it */    
-    const sum = 0;
+{ 
+    let sum = 0;
 
     for (let i=0; i < arr1.length; i++)
     {
@@ -20,7 +19,15 @@ function getSum(arr1, arr2)
     {
         sum += arr2[i];
     }
+    console.log(sum1 + ' ' + sum2);
 }
 
-/* missing ',' between these arrays*/
-getSum([1,2,3][5,66,23]);
+
+getSum([1,2,3],[5,66,23]);
+
+/* I used the VS coe debbuger terminal */
+/* sum is const so we can't change it     
+        const sum = 0;                 */
+
+/* missing ',' between these arrays    
+    getSum([1,2,3][5,66,23]);          */              
