@@ -9,7 +9,7 @@
 
 function getSum(arr1, arr2)
 { 
-    let sum = 0;
+    const sum = 0;
 
     for (let i=0; i < arr1.length; i++)
     {
@@ -19,7 +19,7 @@ function getSum(arr1, arr2)
     {
         sum += arr2[i];
     }
-    console.log(sum1 + ' ' + sum2);
+    //console.log(sum1 + ' ' + sum2);
 }
 
 
