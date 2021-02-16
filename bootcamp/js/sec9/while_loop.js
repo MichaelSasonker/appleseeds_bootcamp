@@ -6,11 +6,12 @@
 * Status: done                                                               *
 ******************************************************************************/
 
-/*----------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
 const ARR = ['boo', 'doooo', 'hooo', 'ro'];
 
-/*----------------------------------------------------------*/
-/* This function count the letters of an array of strings and return a n array of these numbers */ 
+/*---------------------------------------------------------------------------*/
+/* This function count the letters of an array of strings and return
+    a n array of these numbers                                          */ 
 let CountLetters = (arr_of_str) => {
     let res_arr = [];
     let i = 0;
