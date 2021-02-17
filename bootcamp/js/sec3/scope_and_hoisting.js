@@ -44,8 +44,8 @@ function funcB() {
     return a;
 }
 funcB();
-console.log(typeof a); /* prints error */
-console.log(typeof b); /* prints error */
+console.log(typeof a); /* prints undefined */
+console.log(typeof b); /* prints number, b is GLOBAL!!! */
 
 /*---------------------------------------------------------------------------*/
 
