@@ -14,6 +14,7 @@
 !*.ttf
 !*.otf
 !*.webp
+!*.pdf
 ![Mn]akefuncs
 !*.sh
 !*.c
