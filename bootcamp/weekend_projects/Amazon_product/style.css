@@ -961,7 +961,7 @@ hr {
 } 
 
 .right-side {
-    height: 33vh;
+    height: 40vh;
     width: 265px;
     border: 0.5px solid #ccc;
     border-radius: 10px;
@@ -969,8 +969,30 @@ hr {
     position: relative;
     top: -330px;
     right: 195px;
+    padding: 10px 10px;
 }
 
+.right-side div {
+    padding: 5px 0;
+}
+
+.right-side .new-from {
+    text-align: left;
+}
+
+.right-side .new-from a {
+    color: #000;
+    display: grid;
+    grid-template-columns: 90px 90px;
+}
+
+.right-side .new-from .red {
+    color: #b12713;
+}
+
+.right-side .new-from .sign {
+    font-size: 24px;
+}
 
 
 
