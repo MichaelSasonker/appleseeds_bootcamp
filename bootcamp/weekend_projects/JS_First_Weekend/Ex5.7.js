@@ -1,27 +1,19 @@
 /*****************************************************************************
-* File Name: Ex5.4.js                                                        *
+* File Name: Ex5.7.js                                                        *
 * Section: JS-first-weekend-project                                          *
 * Developer: Michael Sasonker                                                *
-* Date: 02/19/21 14:10                                                       *
+* Date: 02/20/21 20:20                                                       *
 * Status: done                                                               *
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
-let ToWeirdCase = (sentence) => {
+let GetLengthShortestWord = (sentence) => {
 
     let words_arr = sentence.split(' ');
 
-    words_arr = words_arr.map(word => {
-        let letter = word.split('');
-        letter = letter.map((letter, index) => (index % 2 === 0) ? letter.toUpperCase() : letter.toLowerCase())
-        word = letter.join('');
+    let length_arr = words_arr.map(word => word.length);
 
-        return word;
-    });
-
-    words_arr = words_arr.join(' ');
-
-    return (words_arr);
+    return (Math.min(...length_arr));
 }
 
 /*---------------------------------------------------------------------------*/
@@ -30,12 +22,12 @@ function MainFunction()
 {
     'use strict';
 
-    console.log('ToWeirdCase first result is:');
-    console.log('String' + ' --> ' + ToWeirdCase('String'));
+    console.log('GetLengthShortestWord first result is:');
+    console.log('aba boo dodod llll a666 nn' + ' --> ' + GetLengthShortestWord('aba boo dodod llll a666 nn'));
     console.log('');
 
-    console.log('ToWeirdCase second result is:');
-    console.log('weird string case' + ' --> ' + ToWeirdCase('weird string case'));
+    console.log('GetLengthShortestWord second result is:');
+    console.log('122 b11oo 13333' + ' --> ' + GetLengthShortestWord('122 b11oo 13333'));
     console.log('');
 
 }; MainFunction();
