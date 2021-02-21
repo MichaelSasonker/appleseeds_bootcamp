@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function remove the first and last elements in an array */
 let RemoveFirstAndLast = (str) => {
     let res = str;
 

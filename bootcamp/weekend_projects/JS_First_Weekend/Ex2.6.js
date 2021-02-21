@@ -6,6 +6,8 @@
 * Status: done                                                               *
 ******************************************************************************/
 
+/*---------------------------------------------------------------------------*/
+/* This function returns the century number for a given year */ 
 let CenturyFromYear = (num) => ((num % 1 !== 0) ? 'INVALID INPUT!!!'
     : ((num / 100) % 1 !== 0) ? Math.floor((num / 100 + 1)) : (num / 100));
 
@@ -30,7 +32,5 @@ function MainFunction()
     console.log('CenturyFromYear fourth result is:');
     console.log(CenturyFromYear(3302));
     console.log('');
-
-
 
 }; MainFunction();

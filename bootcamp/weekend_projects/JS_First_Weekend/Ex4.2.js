@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns an array of Tribonacci seiries with num elements */
 let PrintTribonacci = (arr, num) => {
     let i = 3;
     if (num === 0) 

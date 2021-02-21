@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns the length of the longest word    */
 let GetLengthLongestWord = (sentence) => {
 
     let words_arr = sentence.split(' ');

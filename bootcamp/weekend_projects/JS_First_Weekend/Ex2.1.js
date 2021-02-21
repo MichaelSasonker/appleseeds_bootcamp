@@ -7,10 +7,10 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
-/* This function gets ana array and return the sum of the two lowest numbers * 
+/* This function gets an array and return the sum of the two lowest numbers * 
  * Minimum array length is 4                                                 */ 
 let SumTwoLowest = (arr) => {
-
+    /* cpy_arr gets only integers that greater or equal than 0*/ 
     let cpy_arr = arr.filter((element) => ((element >= 0) && (element % 1 === 0)));
 
     if (cpy_arr.length < 4)

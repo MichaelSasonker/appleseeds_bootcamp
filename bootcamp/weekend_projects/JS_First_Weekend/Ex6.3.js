@@ -7,6 +7,8 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns sorted array of all the letters that the 
+*  two strings has, without duplicates                                      */
 let GetsDistincts = (str1, str2) => {
 
     let letter_arr = (str1.toLowerCase() + str2.toLowerCase()).split('');
@@ -14,7 +16,7 @@ let GetsDistincts = (str1, str2) => {
     let non_repeat_arr = [];
 
     for (let i = 0; i <= letter_arr.length - 1; ++i)
-    {
+    {   /* save the distinct letters in an array */
         if (!(non_repeat_arr.includes(letter_arr[i])))
         {   
             non_repeat_arr.push(letter_arr[i]);

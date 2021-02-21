@@ -7,6 +7,8 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function calcluates the number of years that is going to take to
+*  to get pf number of citizens                                              */ 
 let NBYear = (p0, percentage, aug, pf) => {
     let year = 0;
     while (p0 <= pf)

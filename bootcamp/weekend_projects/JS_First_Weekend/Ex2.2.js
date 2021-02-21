@@ -7,9 +7,10 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function return the decimal value of an array of bits */
 let FromBinaryToDec = (arr) => {
     let index_arr = [];
-
+    /* reversing the array! */
     for (let i = 0; i < (arr.length - 1) / 2; ++i)
     {
         temp = arr[i];
@@ -18,13 +19,13 @@ let FromBinaryToDec = (arr) => {
     }
 
     for (let i = 0; i < arr.length; ++i)
-    {
+    {   /* if the bit is on return the index of it */
         if (arr[i] === 1)
         {
             index_arr.push(i);
         }
     }
-
+            /* for all indexes that are on return 2  ** index */
     return (index_arr.reduce((acc, curr_val) => acc += 2 ** curr_val, 0));
 }
 

@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns an abberviative name for a given name */
 let AbbreviateTwoWords = (name) => {
 
     let words_arr = name.split('');

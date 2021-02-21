@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns the length of the shortest word    */
 let GetLengthShortestWord = (sentence) => {
 
     let words_arr = sentence.split(' ');

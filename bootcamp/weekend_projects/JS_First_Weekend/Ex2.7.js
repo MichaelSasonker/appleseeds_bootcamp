@@ -6,6 +6,8 @@
 * Status: done                                                               *
 ******************************************************************************/
 
+/*---------------------------------------------------------------------------*/
+/* This function returns the result of some basic math calcuation */
 let BasicOperator = (opr, num1, num2) => {
     switch (opr) {
         case '+':

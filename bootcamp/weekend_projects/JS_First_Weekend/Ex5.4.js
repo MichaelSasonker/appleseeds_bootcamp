@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns a sentence with upper case for any even index */
 let ToWeirdCase = (sentence) => {
 
     let words_arr = sentence.split(' ');

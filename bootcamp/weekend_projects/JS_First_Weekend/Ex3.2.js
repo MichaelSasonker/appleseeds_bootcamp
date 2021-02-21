@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function counts the number pepole on the bus after number of bus stops */
 let CoountPepoleBus = (arr_of_arr) => arr_of_arr.reduce((acc, curr_val) => acc += curr_val[0] - curr_val[1], 0);
 
 /*---------------------------------------------------------------------------*/

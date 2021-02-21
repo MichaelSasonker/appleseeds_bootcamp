@@ -7,7 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
-/* Main function that runs the program */ 
+/* This function finds the unique number with in an array */ 
 let FindUnique = (arr) => {
     
     arr.sort((b,a) => b - a);

@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function is my own filter function */
 let MyFilter = (arr, CallbackFunc) => {
     let new_arr = [];
 
@@ -21,6 +22,7 @@ let MyFilter = (arr, CallbackFunc) => {
 }
 
 /*---------------------------------------------------------------------------*/
+/* This function is my own map function */
 let MyMap = (arr, CallbackFunc ) => {
     let new_arr = [];
 
@@ -32,6 +34,7 @@ let MyMap = (arr, CallbackFunc ) => {
 }
     
 /*---------------------------------------------------------------------------*/
+/* This function is my own forEach function */
 let MyForEach = (arr, CallbackFunc) => {
     for (let i = 0; i < arr.length; ++i) 
     {

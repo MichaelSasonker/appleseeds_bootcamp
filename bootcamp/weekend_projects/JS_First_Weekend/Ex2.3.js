@@ -7,11 +7,11 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
-/* Main function that runs the program */ 
+/* This function find the next perfect square */ 
 let FindNextSquare = (num) => {
 
     let base = Math.sqrt(num);
-
+    /* if base is float number */
     if (base % 1 !== 0)
     {
         return (-1);

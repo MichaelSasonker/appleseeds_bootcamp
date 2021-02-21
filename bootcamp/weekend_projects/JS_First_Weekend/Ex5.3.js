@@ -7,20 +7,22 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns the sentence in a camel case */
 let GetCamelCase = (sentence) => {
 
     if (sentence.includes('-'))
-    {
+    {   /* split the sentence to array of words */
         let words_arr = sentence.split('-');
 
         words_arr = words_arr.map(word => {
-            let letter = word.split('');
+            let letter = word.split('');    /* split the words into letters */
+            /* for any letter if it's the first index return it as upper case else return the letter*/
             letter = letter.map((letter, index) => (index === 0) ? letter.toUpperCase() : letter)
             word = letter.join('');
 
             return word;
         });
-
+        /* if the first letter is different from the original remove it and replace it */
         if (words_arr[0][0] != sentence[0])
         {
             let first_word = words_arr.shift();

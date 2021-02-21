@@ -7,11 +7,13 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns the string with '#' sign insted of the original 
+*  string except the last 4 letters                                          */
 let MaskUntilLastFour = (str) => {
 
     let words_arr = str.split('');
 
-    words_arr = words_arr.map((letter, index) => ((index >= words_arr.length -4) ? letter : '#'));
+    words_arr = words_arr.map((letter, index) => ((index >= words_arr.length - 4) ? letter : '#'));
     return (words_arr.join(''));
 }
 
