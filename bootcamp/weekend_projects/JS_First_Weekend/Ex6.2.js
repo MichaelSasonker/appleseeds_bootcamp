@@ -7,42 +7,28 @@
 ******************************************************************************/
 
 /*---------------------------------------------------------------------------*/
+/* This function returns the number of duplicates in a string               */
 let CountDuplicates = (str) => {
 
-    let letter_arr = str.toLowerCase();
-    letter_arr = letter_arr.split('');
-
-    let arr = [];
-    let arr2 = [];
-
-
-    for (let i = 0; i < letter_arr.length - 1; ++i)
+    let arr_letters = str.toLowerCase().split('');
+    
+    let count = 0;
+      
+    for (let i = 0; i < arr_letters.length; ++i)
     {
-        flag = 0;
-        if (letter_arr.includes(letter_arr[i], i + 1))
+        let curr_letter = arr_letters[0];
+          
+        arr_letters.shift();
+      
+        if (arr_letters.includes(curr_letter))
         {
-            flag = 1;
-            arr.push(letter_arr[i]);
+            ++count;
         }
-
+      
+        arr_letters = arr_letters.filter(element => element !== curr_letter)
     }
-
-   
-    for (let i = 0; i < arr.length - 1; ++i)
-    {
-        arr2 = arr.filter(element => element !== arr[i]);
-    }
-    console.log(arr);
-    console.log(arr2);
-    console.log(arr2.length + 1);
-    if (arr2.length === 0)
-    {
-        return 0;
-    }
-    else
-    {
-        return (arr2.length + 1);
-    }
+      
+    return (count);
    
 }
 
