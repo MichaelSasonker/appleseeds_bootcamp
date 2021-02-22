@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            font-size: 12px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 100vh;
+            width: 100vw;
+            line-height: 1.2;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container p {
+            width: 50%;
+        }
+
+        button {
+            font-size: 32px;
+            width: 70px;
+            height: 50px;
+            margin: 10px 10px;
+            text-align: center;
+            padding: 2px;
+            transition: all 1s;
+        }
+
+        button:hover {
+            background-color: rgb(224, 160, 41);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non expedita ipsam laborum magni pariatur dicta necessitatibus dolore.
+            Minima tempore placeat, quisquam in deleniti est enim maxime debitis ea, itaque temporibus.
+        </p>
+        <div>
+            <button class="plus"> + </button>
+            <button class="minus"> - </button>
+        </div>
+    </div>
+    <script src="./font_size.js"></script>
+</body>
+</html>
