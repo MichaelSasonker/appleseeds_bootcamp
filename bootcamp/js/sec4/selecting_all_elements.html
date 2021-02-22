@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting all elements exrcise</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #333;
+        font-size: 42px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100vw;
+        line-height: 1.2;
+    }
+
+    .container {
+        display: grid;
+        place-items: center;
+        margin-top: 200px;
+        border: none;
+        width: 90%;
+
+    }
+
+    div {
+        padding: 5px;
+        border: 2px solid #000;
+        width: 300px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id='myFirstDiv'>myFirstDiv</div>
+        <div id='mySecondDiv'>mySecondDiv</div>
+        <div id='myThirdDiv'>myThirdDiv</div>
+        <div id='myFourthDiv'>myFourthDiv</div>
+    </div>
+    <script>
+        const myFirstDiv = document.querySelector("#myFirstDiv");
+        const mySecondDiv = document.querySelector("#mySecondDiv");
+        const myThirdDiv = document.querySelector("#myThirdDiv");
+        const myFourthDiv = document.querySelector("#myFourthDiv");
+
+        myFirstDiv.style.color = 'red';
+        mySecondDiv.style.color = 'green';
+        myThirdDiv.style.color = 'yellow';
+        myFourthDiv.style.color = 'purple';
+
+        const divs = document.querySelectorAll('div');
+        console.log(divs);
+        divs[0].style.fontSize = '30px';
+
+    </script>
+</body>
+</html>
