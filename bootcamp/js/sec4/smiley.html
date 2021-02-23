@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            color: #3f3f3f;
+        }
+
+        .main-cont {
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input {
+            font-size: 24px;
+            margin: 10px 5px;
+        }
+
+        .smiley-cont {
+            height: 60vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-cont">
+        <h2>
+            How many smileys do you want to see?
+        </h2>
+        <div class="input-cont">
+            <input type="textarea" value="" class='textArea' onkeydown="PrintSmiley()">
+            <input type="button" value="submit" class="btn">
+        </div>
+    </div>
+    <div class="smiley-cont"> </div>
+    <script>
+
+        let smileyCont = document.querySelector('.smiley-cont');
+        let text = document.querySelector('.textArea');
+        let btn = document.querySelector('.btn');
+        
+        btn.addEventListener('click', PrintSmiley());
+
+        function PrintSmiley() {
+
+            smileyCont.textContent = '';
+            let textAreaValue = parseFloat(text.value);
+            
+            if (textAreaValue % 1 != 0 || textAreaValue < 0)
+            {
+                let newHeader = document.createElement('h2');
+                newHeader.textContent = 'INVALID INPUT!!!';
+                newHeader.style.textAlign = 'center';
+                smileyCont.insertAdjacentElement("beforebegin", newHeader);
+            }
+
+            else 
+            {
+                let i = 0;
+                while (i < textAreaValue)
+                {
+                    let newDiv = document.createElement('div');
+                    newDiv.style.display = 'inline-block';
+
+                    let smileyImg = document.createElement('img');
+                    smileyImg.src = 'Vampire_Smiley.png';
+                    smileyImg.style.width = '50px';
+                    smileyImg.style.height = '50px';
+                    smileyImg.style.margin = '7px';
+
+                    smileyCont.insertAdjacentElement("afterbegin", newDiv);
+                    newDiv.insertAdjacentElement("afterbegin", smileyImg);
+
+                    ++i;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
