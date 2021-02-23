@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #333;
+            background-color: #f3f3f3;
+            font-size: 42px;
+            text-align: center;
+        }
+
+        .container {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            height: 40px;
+            width: 200px;
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="checkbox">Please confirm</label>
+        <input type="checkbox" name="checkbox" class="checkbox">
+    </div>
+    <script>
+        let body = document.body;
+        let container = document.querySelector('.container');
+        let checkbox = document.querySelector('[name="checkbox"]');
+        let newImg = document.createElement('img');
+        newImg.src = 'https://picsum.photos/400/400';
+        newImg.style.borderRadius = '50%';
+
+        checkbox.addEventListener('click', function(event) {
+
+            if (event.currentTarget.checked)
+            {
+                container.insertAdjacentElement('afterend', newImg);
+            }
+            else
+            {
+                newImg.remove();
+            }
+        })
+    </script>
+</body>
+</html>
