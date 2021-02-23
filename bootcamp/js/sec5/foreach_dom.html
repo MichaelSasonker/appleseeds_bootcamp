@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each DOM Exercise</title>
+</head>
+<body>
+    <script>
+        const users = [{
+            id: 167464,
+            firstName: "Jimmy",
+            lastName: "Arnold",
+            email: "jimmya@gmail.com",
+            },
+            {
+            id: 578447,
+            firstName: "Martha",
+            lastName: "Goldman",
+            email: "gold@hotmail.com",
+            },
+            {
+            id: 864578,
+            firstName: "Tim",
+            lastName: "Burton",
+            email: "timmy.hotmail.com",
+            },
+        ];
+        let body = document.body;
+        let ol = document.createElement('ol');
+        let li1 = document.createElement('li');
+        let li2 = document.createElement('li');
+        let li3 = document.createElement('li');
+        let namesList = [];
+
+        let liList = [];
+        liList.push(li1);
+        liList.push(li2);
+        liList.push(li3);
+
+        users.forEach(element => {
+            namesList.push(`${element.firstName} ${element.lastName}`);
+        });
+
+        body.insertAdjacentElement('afterbegin', ol);
+        body.style.backgroundColor = '#f3f3f3'
+        ol.style.height = '10vh';
+        ol.style.fontSize = '24px';
+        ol.style.listStyleType = 'upper-roman';
+        
+        liList.forEach((element, index) => {
+            ol.insertAdjacentElement('afterbegin', element);
+            element.textContent = namesList[index];
+            element.setAttribute('data-id', users[index].id);      
+        });
+
+        console.log(ol);
+    </script>
+</body>
+</html>
