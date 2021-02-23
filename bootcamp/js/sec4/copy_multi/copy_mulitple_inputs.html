@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Mulitple Inputs Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #333;
+            background-color: #f3f3f3;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .main-cont {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verf-cont {
+            margin: 40px;
+            padding: 40px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+
+        .verf-cont input {
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            font-size: 24px;
+            height: 50px;
+            width: 100px;
+            background: #030303;
+            color: #f3f3f3;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-cont">
+        <h1>
+            Text to copy:
+        </h1>
+        <h3>
+            123456
+        </h3>
+        <div class="verf-cont">
+            <input type="text" onkeyup="RestrictToOne()">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <br>
+            <button class="btn"> Verify </button>
+        </div>
+    </div>
+
+    <script src="./copy_mulitple_inputs.js"></script>
+</body>
+</html>
