@@ -49,7 +49,7 @@
             How many smileys do you want to see?
         </h2>
         <div class="input-cont">
-            <input type="textarea" value="" class='textArea' onkeydown="PrintSmiley()">
+            <input type="textarea" value="" class='textArea'>
             <input type="button" value="submit" class="btn">
         </div>
     </div>
@@ -60,7 +60,7 @@
         let text = document.querySelector('.textArea');
         let btn = document.querySelector('.btn');
         
-        btn.addEventListener('click', PrintSmiley());
+        btn.addEventListener('click', PrintSmiley);
 
         function PrintSmiley() {
 

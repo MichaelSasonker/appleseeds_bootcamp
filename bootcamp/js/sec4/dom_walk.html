@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dom Walk Exercise</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                title 1
+            </li>
+            <li class="start-here">
+                title 2
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        sub title 1
+                    </li>
+                    <li>
+                        sub title 2
+                    </li>
+                    <li>
+                        sub title 3
+                    </li>
+                </ul>
+            </li>
+            <li>
+                title 3
+            </li>
+        </ul>
+        <div>
+            <p>
+                Hello World!
+            </p>
+        </div>
+        <script>
+            let li1 = document.querySelector('.start-here');
+            let li2 = document.createElement('li');
+            
+            li1.firstChild.textContent = 'main title';
+            li2.textContent = 'sub title 4';
+
+            li1.nextElementSibling.firstElementChild.appendChild(li2);
+    
+            li1.parentElement.lastElementChild.remove();
+
+            li1.parentElement.parentElement.previousElementSibling.lastElementChild.textContent = 'Master Of The DOM!!!';
+
+            li1.parentElement.parentElement.lastElementChild.previousElementSibling.textContent = 'I did it!!!';
+            li1.parentElement.parentElement.lastElementChild.previousElementSibling.style.fontSize = '40px';
+            li1.parentElement.parentElement.lastElementChild.previousElementSibling.style.color = 'red';
+
+
+                       
+        </script>
+    </body>
+</html>
