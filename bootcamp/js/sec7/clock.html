@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #f3f3f3;
+            background-color: #333;
+            font-size: 36px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+        let body = document.body;
+        let divCont = document.querySelector('.container');
+        let newHeader = document.createElement('h1');
+
+        newHeader.style.fontWeight = 100;
+        newHeader.style.fontSize = '120px';
+        newHeader.style.border = '2px solid #ffffff';
+        newHeader.style.borderRadius = '10px'
+        newHeader.style.padding = '20px';
+
+        function DisplayTime() {
+            let date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+
+            h = (h < 10) ? '0' + h: h;
+            m = (m < 10) ? '0' + m: m;
+            s = (s < 10) ? '0' + s: s;
+
+            let time = `${h}:${m}:${s}`;
+            
+            newHeader.textContent = time;
+
+            divCont.insertAdjacentElement('afterbegin', newHeader);
+
+            setTimeout(DisplayTime, 1000);
+        }
+
+        DisplayTime();
+    </script>
+</body>
+</html>

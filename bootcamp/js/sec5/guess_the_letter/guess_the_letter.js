@@ -24,8 +24,6 @@ function Round() {
     function GenerateRandomLetter() {
         let randNumber = Math.floor(Math.random() * 25) + 97; 
         let randLetter = String.fromCharCode(randNumber);
-    
-        console.log(`the letter is: ${randLetter}`);
         return (randLetter);
     }
     
