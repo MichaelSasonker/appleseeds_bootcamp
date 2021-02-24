@@ -6,53 +6,26 @@
 * Status: done                                                               *
 ******************************************************************************/
 
+const form = document.querySelector('[name="verify"]');
+const inputs = form.querySelectorAll('.inputs input');
 
-let inputs = document.querySelectorAll('input');
-let newDiv = document.createElement('div');
-let body = document.body;
-let msg = document.createElement('h2');
-let btn = document.querySelector('.btn');
-
-body.insertAdjacentElement('afterend', newDiv);
-
-btn.addEventListener('click', (bool) => {
-    msg.textContent = '';
-    // bool = true;
-    if (bool) 
-    {
-        msg.textContent = 'Great!';
-        msg.style.fontSize = '40px';
-        msg.style.textAlign = 'center';
-        msg.style.color = 'green';
-        newDiv.insertAdjacentElement('afterend', msg);
-    }
-
-    else 
-    {
-        msg.textContent = 'Fasle!';
-        msg.style.fontSize = '40px';
-        msg.style.textAlign = 'center';
-        msg.style.color = 'red';
-        newDiv.insertAdjacentElement('afterend', msg);
-    }
-});
-
-inputs[0].value = '5';
-
-
-function RestrictToOne() {
-    for (let i = 0; i < inputs.length; ++i)
-    {
-        let val = parseInt(inputs[i].value.length);
-        if (val.length < 1)//|| val == 'NaN')
-        {
-            console.log('ERORR');
-        }
-        else 
-        {
-            console.log('AWSOME!!!')
-        }
-
+function handleInput(e) {
+    // check for data that was inputtted and if there is a next input, focus it
+    const input = e.target;
+    if (input.nextElementSibling && input.value) {
+        input.nextElementSibling.focus();
     }
 }
 
+function handlePaste(e) {
+    const paste = e.clipboardData.getData('text');
+    // loop over each input, and populate with the index of that string
+    inputs.forEach((input, i) => {
+        console.log(input);
+        input.value = paste[i] || '';
+    });
+}
+
+inputs[0].addEventListener('paste', handlePaste);
+
+form.addEventListener('input', handleInput);

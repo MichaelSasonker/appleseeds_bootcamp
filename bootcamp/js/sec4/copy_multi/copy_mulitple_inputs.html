@@ -27,14 +27,14 @@
             align-items: center;
         }
 
-        .verf-cont {
+        form {
             margin: 40px;
             padding: 40px;
             border: 1px solid #000;
             border-radius: 10px;
         }
 
-        .verf-cont input {
+        input {
             height: 40px;
             width: 40px;
             font-size: 20px;
@@ -59,16 +59,17 @@
         <h3>
             123456
         </h3>
-        <div class="verf-cont">
-            <input type="text" onkeyup="RestrictToOne()">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <br>
-            <button class="btn"> Verify </button>
-        </div>
+        <form name="verify">
+            <div class="inputs">
+              <input type="text" name="n1" maxlength="1">
+              <input type="text" name="n2" maxlength="1">
+              <input type="text" name="n3" maxlength="1">
+              <input type="text" name="n4" maxlength="1">
+              <input type="text" name="n5" maxlength="1">
+              <input type="text" name="n6" maxlength="1">
+            </div>
+            <input type="submit" value="Verify" class="btn">
+          </form>
     </div>
 
     <script src="./copy_mulitple_inputs.js"></script>
