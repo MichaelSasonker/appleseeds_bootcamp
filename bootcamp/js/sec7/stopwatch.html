@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #f3f3f3;
+            background-color: #333;
+            font-size: 36px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            margin: 20px;
+            height: 50px;
+            width: 100px;
+            font-size: 28px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="btn-cont">
+            <input type="buttom" class='stop' value='stop'>
+            <input type="buttom" class='reset' value='reset'> 
+        </div>
+    </div>
+
+    <script>
+        let body = document.body;
+        let divCont = document.querySelector('.container');
+        let newHeader = document.createElement('h1');
+
+        newHeader.style.fontWeight = 100;
+        newHeader.style.fontSize = '120px';
+        newHeader.style.border = '2px solid #ffffff';
+        newHeader.style.borderRadius = '10px'
+        newHeader.style.padding = '20px';
+        let m = 0
+        let s = 0
+        let ms = 0;
+        function StopWatch() {
+            let date = new Date();
+            // let m = date.getMinutes();
+            // let s = date.getSeconds();
+            // let ms = date.getMilliseconds();
+     
+
+            ++ms;
+            ms = (ms < 100) ? '0' + ms : ms;
+            if (ms % 1000 === 0)
+            {
+
+                
+                ms = 0;
+                ++s;
+
+                if (s / 60 === 1)
+                {
+                    ++m;
+                    s = 0;
+                    s = (s < 10) ? '0' + s : s;
+
+                    if (m / 60 === 1)
+                    {   
+                        m = (m < 10) ? '0' + m : m;
+
+                        console.log('stop');
+                    }
+                }
+            }
+
+
+            let time = `${m}:${s}:${ms}`;
+            
+            newHeader.textContent = time;
+
+            divCont.insertAdjacentElement('afterbegin', newHeader);
+
+            setTimeout(StopWatch, 0.0001);
+        }
+
+        StopWatch();
+    </script>
+</body>
+</html>
