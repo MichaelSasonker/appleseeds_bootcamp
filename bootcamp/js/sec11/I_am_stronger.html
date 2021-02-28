@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Stronger Exercise</title>
+</head>
+
+<body>
+    <script>
+        const hero = {
+            health: 5,
+            power: 68,
+            getStrength: function () {
+                if (this.health <= 5) {
+                    return (this.power - 10);
+                }
+                else
+                    return (this.power);
+            }
+        }
+
+        function whoIsStronger(getStrength) {
+            const myStrength = 82;
+            console.log(hero.getStrength)
+            if (getStrength() < myStrength) {
+                return ("I am stronger");
+            }
+            else
+                return ("You are stronger");
+        }
+        console.log(whoIsStronger(hero.getStrength.bind(hero)));
+        /* Because we are senting the 'getStrength' function of the hero object to a function,
+           to 'whoIsStronger' function has the function object of getStrength but the 'this' keyword 
+           is not define there so we need to bind it to 'hero' object. When we do that we're 'telling'
+           the function that the 'this' keyword is reffering to 'hero' object.                 */
+    </script>
+</body>
+
+</html>
