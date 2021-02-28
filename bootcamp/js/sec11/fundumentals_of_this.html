@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundumentals Of This Exercise</title>
+</head>
+<body>
+    <script>
+        /* This is pointing to the window object because it's refer to the global object. */
+        console.log(this); 
+
+        /* A. This is pointing to the window object because greet is an arrow function.
+              So, it's prints hello only, window object doesn't have name key             */
+        const myObj= {  
+            name: "Timmy",
+            greet: () => {    
+                console.log(`Hello ${this.name}`);
+            },
+        };
+        myObj.greet();
+
+        /* B. To fix it we need to use a regular function or anonymus function */
+        const myObj_a= {  
+            name: "Timmy",
+            greet: function() {    
+                console.log(`Hello ${this.name}`);
+            },
+        };
+        myObj_a.greet();
+
+        /* This is pointing to window */
+        const myFuncDec = function () {
+            console.log(this);
+        };
+        myFuncDec();
+
+        /* This is pointing to window */
+        const myFuncArrow = () => {  
+            console.log(this);
+        };
+        myFuncArrow(); 
+
+        /* A. It prints error because there is no class that calls element. */
+        // document.querySelector(".element").addEventListener(() => {  
+        //     console.log(this);
+        // });
+        /* B. We need to create this element with 'element' class name. 
+              Than we need to insert it to the DOM, also we need to add the first
+              argument of the event listener.
+              It will print the window element because it's in arrow function */
+        let body = document.body;
+        let newEle = document.createElement('element');
+        newEle.classList.add('element');
+        newEle.style.border = '1px solid red';
+        newEle.style.height = '10vh';
+        console.log(newEle);
+        body.insertAdjacentElement('afterbegin', newEle);
+        
+        let a = document.querySelector('.element');
+        console.log(a);
+        a.addEventListener('click', () => {  
+            console.log(this);
+        });
+
+
+    </script>
+</body>
+</html>
