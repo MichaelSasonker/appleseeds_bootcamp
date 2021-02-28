@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Exercise</title>
+</head>
+<body>
+    <script>
+        function Pokemon(pokName, pokType, pokAttakList) {
+            this.pokName = pokName;
+            this.pokType = pokType;
+            this.pokAttakList = pokAttakList;
+        }
+
+        let pikachu = new Pokemon('Pikachu', 'Electric', ['lighting strike', 'evasion']);
+        let charmander = new Pokemon('Charmander', 'Fire', ['blaze attack', 'fireball']);
+        let pidgeotto = new Pokemon('Pidgeotto', 'Flying', ['keen Eye', 'tangled feet']);
+
+        Pokemon.prototype.CallPokemon = function() {
+            return (`I choose you, ${this.pokName}`);
+        }
+
+        Pokemon.prototype.Attack = function(num) {
+            return (`${this.pokName} used ${this.pokAttakList[num]}`);
+        }
+
+        console.log(pikachu.CallPokemon());
+        console.log(charmander.CallPokemon());
+        console.log(pidgeotto.CallPokemon());
+
+        console.log(pikachu.Attack(0));
+        console.log(charmander.Attack(1));
+        console.log(pidgeotto.Attack(0));
+    </script>
+</body>
+</html>
