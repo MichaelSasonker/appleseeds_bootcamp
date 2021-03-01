@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Channing Exercise</title>
+</head>
+<body>
+    <script>
+        function MakeAllCaps(arrOfWords) {
+            return (new Promise(function(resolve, reject) {
+                let result;
+                result = arrOfWords.filter(word => (typeof(word) != "string"));
+                if (result.length !== 0) {
+                    reject('Invalid input!');
+                }
+                else {
+                    resolve(arrOfWords.map(word => (word.toUpperCase())));        
+                }
+            }));
+        }
+
+        function SortWords(arrOfWords) {
+            return (new Promise((resolve, reject) => {
+                if (arrOfWords.length === 0) {
+                    reject('ERORR');
+                }
+                else {
+                    resolve(arrOfWords.sort())    
+                }
+            }));
+        }
+
+        let p1 = MakeAllCaps(['baa', 'abb', 'oo', 'ee', 'zz',1])
+            .then(resultA => {
+                SortWords(resultA)
+                .then(resultB => console.log(resultB));
+            })
+            .catch(err => { console.log(err)});
+
+        let p2 = MakeAllCaps(['baa', 'abb', 'oo', 'ee', 'zz'])
+        .then(resultA => {
+            SortWords(resultA)
+            .then(resultB => console.log(resultB));
+        })
+        .catch(err => { console.log(err)});
+
+        let p3 = MakeAllCaps([])
+        .then(resultA => {
+            SortWords(resultA)
+            .then(resultB => console.log(resultB));
+        })
+        .catch(err => { console.log(err)});
+    </script>
+</body>
+</html>
