@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chack Noris Ninja Exercise</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            color: #333;
+            background: #f3f3f3;
+            height: 100vh;
+        }
+
+        p {
+            margin-top: 40px;
+            height: 200px;
+            width: 80%;
+            border: 1px solid #fff;
+            text-align: center;
+            padding: 10px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            height: 70px;
+            width: 120px;
+            font-size: 20px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px;
+            font-size: 24px;
+            background: #0f0f0f;
+            color: #fff;
+        
+        }
+
+        select option {
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script>
+        const baseCategoriesURL = `https://api.chucknorris.io/jokes/categories`;
+        const baseURL = `https://api.chucknorris.io/jokes/random?category=`;
+        const body = document.body;
+        const p1 = document.createElement('p');
+        const btn1 = document.createElement('button');
+        btn1.setAttribute('type', 'submit');
+        btn1.textContent = 'JOKE';
+        const select = document.createElement('select');
+        select.setAttribute('name', 'categories');
+
+
+        async function GetCategories(url) {
+            const respone = await fetch(url);
+            const data = await respone.json();
+
+            let categories = await Promise.all(
+                data.map(async (cat) => {
+                    return (cat);
+            }));
+            categories.forEach(cat => {
+                select.innerHTML += `<option value="${cat}">${cat}</option>` ;
+            });
+            return (select);
+        }
+
+        const cats = GetCategories(baseCategoriesURL);
+
+        async function ActionFunction() {
+            btn1.addEventListener('click', async () => {
+                // const cats = GetCategories(baseCategoriesURL);
+                let selectedCat =  await select.options[select.selectedIndex].text;
+                const respone = await fetch(`${baseURL}${selectedCat}`);
+                const data = await respone.json();
+
+                p1.textContent = data.value;
+            })
+        }
+
+        body.insertAdjacentElement('afterbegin', p1);
+        p1.insertAdjacentElement('afterend', btn1);
+        p1.insertAdjacentElement('afterend', select);
+        
+        ActionFunction();
+
+    </script>
+</body>
+
+</html>

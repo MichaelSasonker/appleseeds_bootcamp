@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chack Noris Exercise</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            color: #333;
+            background: #f3f3f3;
+            height: 100vh;
+        }
+
+        p {
+            margin-top: 40px;
+            height: 200px;
+            width: 80%;
+            border: 1px solid #fff;
+            text-align: center;
+            padding: 10px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            height: 70px;
+            width: 120px;
+            font-size: 20px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        .p2 {
+            height: 700px;
+            width: 80%;
+            border: 1px solid #fff;
+            text-align: left;
+            padding: 10px;
+            background: #0f0f0f;
+            color: #fff;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const baseURL = `https://api.chucknorris.io/jokes/random`;
+        const body = document.body;
+        const p1 = document.createElement('p');
+        const btn1 = document.createElement('button');
+        btn1.setAttribute('type', 'submit');
+
+        const p2 = document.createElement('p');
+        const btn2 = document.createElement('button');
+        btn2.setAttribute('type', 'submit');
+        p2.classList.add('p2')
+
+        async function GetAndUseData(url) {
+
+            btn1.textContent = 'JOKE';
+
+            btn1.addEventListener('click', async () => {
+                p1.textContent = '';
+                const respone = await fetch(url);
+                const data = await respone.json();
+                let joke = data.value;
+                p1.textContent = joke;
+            });
+
+            body.insertAdjacentElement('afterbegin', p1);
+            p1.insertAdjacentElement('afterend', btn1);
+        }
+        GetAndUseData(baseURL);
+
+
+        async function GetAndUseData_2(url) {
+
+            btn2.textContent = 'JOKES';
+
+            btn2.addEventListener('click', async () => {
+
+                p2.innerHTML = '';
+                for (let i = 0; i < 9; ++i) {
+                    const respone = await fetch(url);
+                    const data = await respone.json();
+                    let joke = data.value;
+                    p2.innerHTML += await `${joke} </br> </br>`;
+                }
+            });
+
+            body.insertAdjacentElement('beforeend', p2);
+            p2.insertAdjacentElement('afterend', btn2);
+        }
+        GetAndUseData_2(baseURL);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API Exercise</title>
+</head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            color: #333;
+            background: #f0f0f0;
+            height: 100vh;
+        }
+
+        p {
+            margin: 40px;
+            height: 90%;
+            width: 100%;
+            border: 1px solid #fff;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            height: 70px;
+            width: 120px;
+            font-size: 28px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        input {
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            height: 70px;
+            width: 120px;
+            font-size: 28px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+</style>
+<body>
+    <script>
+        const body = document.body;
+        const btn1 = document.createElement('button');
+        const p1 = document.createElement('p');
+        const input = document.createElement('input');
+
+        btn1.textContent = 'Dog';
+        input.setAttribute('type', 'number');
+        input.setAttribute('max', '50');
+        input.setAttribute('min', '1');
+        input.setAttribute('value', '1');
+
+        const baseURL = 'https://dog.ceo/api/breeds/image/random';
+
+        body.insertAdjacentElement('afterbegin', p1);
+        p1.insertAdjacentElement('afterend', btn1);
+        btn1.insertAdjacentElement('beforebegin', input);
+
+        async function GetImgs() {
+            const respone = await fetch(`${baseURL}/${input.value}`);
+            const data = await respone.json();
+
+            const dataImgs = data.message;
+            p1.innerHTML = '';
+
+            dataImgs.forEach(img => {
+                p1.innerHTML += `<img id="img" width="155" height="155" src="${img}"/>`; 
+            });
+        }
+        
+        btn1.addEventListener('click', GetImgs);
+    </script>
+</body>
+</html>
