@@ -50,7 +50,7 @@
     <script>
         const body = document.body;
         const table = document.createElement('table');
-        table.classList.add('t01');
+        const baseEndpoint = 'https://swapi.dev/api/people/';
 
         table.innerHTML = `<tr><th colspan="5">Star Wars</th></tr>
             <tr>
@@ -64,12 +64,8 @@
 
         body.insertAdjacentElement('afterbegin', table);
 
-        const baseEndpoint = 'https://swapi.dev/api';
-        const peopleEndpoint = `${baseEndpoint}/people/`;
-
-
         async function GetCharacters() {
-            const response = await fetch(peopleEndpoint);
+            const response = await fetch(baseEndpoint);
             const data = await response.json();
 
     
@@ -80,10 +76,11 @@
                 const row = document.createElement('tr');
 
                 row.innerHTML = `<td>${charecter.name}</td>
-                <td>${charecter.hair_color}</td>
-                <td>${charecter.height}</td>
-                <td>${homeWorldData.name}</td>
-                <td>${homeWorldData.population}</td>`;
+                    <td>${charecter.hair_color}</td>
+                    <td>${charecter.height}</td>
+                    <td>${homeWorldData.name}</td>
+                    <td>${homeWorldData.population}</td>
+                    `;
 
                 table.insertAdjacentElement('beforeend', row);
             });
