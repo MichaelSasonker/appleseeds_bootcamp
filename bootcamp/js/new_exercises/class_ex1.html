@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Ex1</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name, sound) {
+                this.name = name;
+                this.sound = sound;
+            }
+
+            GetName() {
+                return (this.name);
+            }
+
+            GetSound() {
+                return (this.sound);
+            }
+
+            Print() {
+                console.log(`Name: ${this.name}, Sound: ${this.sound}`);
+            }
+
+        }
+
+
+        const lion = new Animal('Lion', 'roar');
+        const dog = new Animal('Dog', 'woof');
+        const cat = new Animal('Cat', 'mio');
+
+        lion.Print();
+        dog.Print();
+        cat.Print();
+
+        console.log(lion.GetName());
+        console.log(lion.GetSound());
+
+    </script>
+</body>
+
+</html>

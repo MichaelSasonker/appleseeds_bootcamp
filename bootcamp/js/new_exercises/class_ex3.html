@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Ex3</title>
+</head>
+
+<body>
+    <script>
+        class sortNumber {
+            constructor() {
+                this.numList = [];
+            }
+
+            AddNum(num) {
+                let isPrime = true;
+
+                for (let i = 2; i < num; ++i) {
+                    if (num % i == 0) {
+                        isPrime = false;
+                    }
+                }
+
+                if (isPrime) {
+                    if (this.numList.includes(num)) {
+                        return (false);
+                    }
+                    else {
+                        this.numList.push(num);
+                        this.numList.sort((b, a) => (b - a));
+                        return (true);
+                    }
+                }
+
+                else {
+                    return (false);
+                }
+            }
+
+            RemoveNum(num) {
+                if (this.numList.indexOf(num) != -1) {
+                    this.numList.splice(this.numList.indexOf(num), 1);
+                    return (true);
+                }
+                else {
+                    return (false);
+                }
+            }
+
+            GetAll() {
+                return (this.numList);
+            }
+
+            Print() {
+                console.log(`The Array is: ${this.numList}`);
+            }
+
+            Share(otherList) {
+                let counter = 0;
+                for (let i = 0; i < otherList.numList.length; ++i) {
+                    if (this.numList.includes(otherList.numList[i])) {
+                        ++counter;
+                    }
+                }
+                return (counter);
+            }
+
+            Union(otherList) {
+
+                let newArr = this.numList.concat(otherList.numList);
+                newArr.sort((b, a) => (b - a));
+                for (let i = 0; i < newArr.length; ++i) {
+                    if (newArr[i] == newArr[i + 1]) {
+                        newArr.splice(newArr.indexOf(newArr[i]), 1);
+                    }
+                }
+                return (newArr);
+            }
+
+        }
+
+        let list1 = new sortNumber();
+        console.log(list1.AddNum(7));
+        console.log(list1.AddNum(5));
+        console.log(list1.AddNum(13));
+        console.log(list1.AddNum(11));
+        console.log(list1.AddNum(3));
+        console.log(list1.AddNum(3));
+        list1.Print();
+
+        console.log(list1.RemoveNum(1));
+        console.log(list1.RemoveNum(11));
+
+
+        console.log(list1.GetAll());
+
+        let list2 = new sortNumber();
+        list2.AddNum(23);
+        list2.AddNum(31);
+        list2.AddNum(17);
+        list2.AddNum(13);
+        list2.AddNum(5);
+        console.log('The number of joint numbers is: ' + list1.Share(list2));
+
+        list1.Print();
+        list2.Print();
+
+        console.log(list1.Union(list2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Ex4</title>
+</head>
+
+<body>
+    <script>
+        class Point {
+            constructor() {
+                this.x = [];
+                this.y = [];
+            }
+
+            GetX() {
+                return (this.x);
+            }
+
+            GetY() {
+                return (this.y);
+            }
+
+            AddToX(newX) {
+                this.x.push(newX);
+            }
+
+            AddToY(newY) {
+                this.y.push(newY);
+            }
+
+            SetX(newX) {
+                this.x.pop();
+                this.x.push(newX)
+            }
+
+            SetY(newY) {
+                this.y.pop();
+                this.y.push(newY)
+            }
+
+            AddPoint(otherPoint) {
+                this.x.push(...otherPoint.x);
+                this.y.push(...otherPoint.y);
+            }
+
+            IsSame(otherPoint) {
+                for (let i = 0; i < otherPoint.x.length; ++i) {
+                    if (otherPoint.x[i] == this.x[i] && otherPoint.y[i] == this.y[i])
+                        return true;
+                    else
+                        return false;
+                }
+            }
+
+            Print() {
+                console.log(`The x values are: ${this.x}, The y values are: ${this.y}`);
+            }
+        }
+
+        let p1 = new Point();
+        p1.GetX();
+        p1.AddToX(1);
+        p1.AddToY(2);
+        p1.Print();
+
+        let p2 = new Point();
+        p1.GetY();
+        p2.AddToX(1);
+        p2.AddToY(2);
+        p2.Print();
+
+        p1.AddPoint(p2);
+        p1.Print();
+
+        console.log(p1.IsSame(p2))
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Ex5</title>
+</head>
+
+<body>
+    <script>
+        class Room {
+            constructor(id, level, amount) {
+                this.id = id;
+                this.level = level;
+                this.amount = amount;
+                this.isFree = false;
+            }
+
+            IsValidAmount(newAmount) {
+                if (newAmount > this.amount) {
+                    return (false);
+                }
+                else {
+                    this.isFree = true;
+                    return (true);
+                }
+            }
+
+            Print() {
+                console.log(`ID: ${this.id}, Level: ${this.level}, Amount: ${this.amount}, IsFree: ${this.isFree}`);
+            }
+        }
+
+        class Hotel {
+            constructor(newRoom) {
+                this.rooms = [newRoom];
+            }
+
+            AddRoom(room) {
+                let isDifferentId = true;
+
+                for (let i = 0; i < this.rooms.length; ++i) {
+                    if (this.rooms[i].id === room.id) {
+                        isDifferentId = false;
+                    }
+                }
+
+                if (isDifferentId) {
+                    this.rooms.push(room);
+                    return (true);
+                }
+                else {
+                    return (false);
+                }
+            }
+
+            AddNewRoom(roomId, roomLevel, roomAmount) {
+                let newRoom = new Room(roomId, roomLevel, roomAmount);
+                return (this.AddRoom(newRoom));
+            }
+
+            RemoveRoom(newRoomId) {
+                let isRemoved = false;
+
+                for (let i = 0; i < this.rooms.length; ++i) {
+                    if ((!(this.rooms[i].isFree)) && (this.rooms[i].id === newRoomId)) {
+                        this.rooms.splice(i, 1);
+                        isRemoved = true;
+                    }
+                }
+
+                return (isRemoved);
+            }
+
+            CheckFreeRooms(newAmount) {
+                return (this.rooms.filter(roomObj => roomObj.amount >= newAmount));
+            }
+
+            CheckIn(newRoomId, newAmount) {
+                let isSuccseed = false;
+                for (let i = 0; i < this.rooms.length; ++i) {
+                    if ((!(this.rooms[i].isFree))
+                        && (this.rooms[i].id === newRoomId)
+                        && (this.rooms[i].amount >= newAmount)) {
+                        this.rooms[i].isFree = true;
+                        isSuccseed = true;
+                    }
+                }
+
+                return (isSuccseed);
+            }
+
+            HighRoomFree() {
+                let maxLevel = this.rooms[0].level;
+                let newResult = [];
+
+                let res = this.rooms.filter(roomObj => !(roomObj.isFree));
+                res = res.sort((b, a) => b.amount - a.amount);
+
+                for (let i = 0; i < res.length; ++i) {
+                    if (res[i].level >= maxLevel) {
+                        maxLevel = res[i].level;
+                    }
+                }
+
+                for (let i = 0; i < res.length; ++i) {
+                    if (res[i].level === maxLevel) {
+                        newResult.push(res[i]);
+                    }
+                }
+
+                return (newResult);
+            }
+
+            Print() {
+                console.log(this.rooms)
+            }
+        }
+
+
+        let room1 = new Room(1, 2, 4);
+        room1.Print();
+
+        console.log(room1.IsValidAmount(4));
+        room1.Print();
+
+        let room2 = new Room(2, 2, 3);
+        let room3 = new Room(3, 3, 2);
+        room2.Print();
+        room3.Print();
+
+        let hotel1 = new Hotel(room1);
+        hotel1.Print();
+
+        console.log(hotel1.AddRoom(room1));
+        hotel1.AddRoom(room2);
+        hotel1.Print();
+
+        hotel1.AddNewRoom(4, 3, 2);
+        hotel1.Print();
+
+        console.log(hotel1.AddNewRoom(4, 3, 2));
+        hotel1.Print();
+
+        console.log(hotel1.RemoveRoom(4));
+        console.log(hotel1.RemoveRoom(1));
+        hotel1.Print();
+
+        console.log(hotel1.CheckFreeRooms(3));
+        console.log(hotel1.CheckIn(1, 3));
+        console.log(hotel1.CheckIn(2, 2));
+        hotel1.Print();
+
+        hotel1.AddNewRoom(5, 4, 5);
+        hotel1.AddNewRoom(3, 4, 4);
+        hotel1.AddNewRoom(6, 4, 2);
+        hotel1.AddNewRoom(7, 1, 2);
+        hotel1.Print();
+
+        console.log(hotel1.HighRoomFree());
+
+    </script>
+</body>
+
+</html>

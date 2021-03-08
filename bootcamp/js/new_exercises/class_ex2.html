@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Ex2</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(brand, speed) {
+                this.brand = brand;
+                this.speed = speed;
+            }
+
+            GetBrand() {
+                return (this.brand);
+            }
+
+            GetSpeed() {
+                return (this.speed);
+            }
+
+            Print() {
+                console.log(`Brand: ${this.brand}, Speed: ${this.speed}`);
+            }
+
+            SetSpeed(newSpeed) {
+                this.speed = newSpeed;
+            }
+
+        }
+
+        let car1 = new Car('Tesla', 250);
+        let car2 = new Car('Bugatti', 320);
+        let car3 = new Car('Ferrari', 340);
+        let car4 = new Car('Aston Martin', 280);
+
+        console.log(typeof car1);
+        console.log(car2);
+        car3.Print();
+
+        let carsArr = [car1, car2, car3, car4];
+        console.log(carsArr);
+
+        console.log(carsArr.reduce((max, currnetVal) => (
+            (max.speed > currnetVal.speed)
+                ? (max)
+                : (currnetVal)))
+        );
+
+        const SortCarArr = (arr) => (arr.sort((b, a) => (b.speed - a.speed)));
+        console.log(SortCarArr(carsArr));
+
+    </script>
+</body>
+
+</html>
