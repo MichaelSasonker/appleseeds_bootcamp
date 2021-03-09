@@ -37,6 +37,7 @@ class ToDoList {
     }
 
     CreateTask(newText) {
+        let isUpdate = false;
         let isValidId = true;
         let newTask = new Task(newText);
 
@@ -47,17 +48,21 @@ class ToDoList {
         }
         if (isValidId === false) {
             newTask.id = newTask.SetId();
+            isUpdate = true;
         }
         this.list.push(newTask);
+
+        return(isUpdate);
     }
 
     ReadTask(taskText) {
+
         for (let i = 0; i < this.list.length; ++i) {
             if (this.list[i].text === taskText) {
                 return (this.list[i]);
             }
         }
-        return ('No such task!');
+        return (false);
     }
 
     UpdateText(taskText, newTaskText) {
@@ -108,6 +113,12 @@ class ToDoList {
         return (isUpdate);
     }
 
+    SortList() {
+        this.list.sort((b, a) => {
+            return (b.isDone - a.isDone);
+        });
+    }
+
     Print() {
         console.log('The List is:');
         console.log(this.list);
@@ -137,4 +148,10 @@ console.log(list1.UpdateText('Clean', 'Clean the house!'));
 list1.Print();
 console.log(list1.UpdateStatusToNotDone('Read a book'));
 console.log(list1.DeleteTask('Clean the house!'));
+list1.Print();
+list1.UpdateStatusToDone('Exercise');
+list1.UpdateStatusToDone('CRUD');
+list1.Print();
+
+list1.SortList();
 list1.Print();
