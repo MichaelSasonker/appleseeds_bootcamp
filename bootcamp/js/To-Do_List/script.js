@@ -102,13 +102,24 @@ class ToDoList {
     DeleteTask(taskId) {
         let isUpdate = false;
         for (let i = 0; i < this.list.length; ++i) {
-            if (this.list[i].taskId === taskId) {
+            if (this.list[i].id === taskId) {
                 this.list.splice(i, 1);
                 isUpdate = true;
             }
         }
 
         return (isUpdate);
+    }
+
+
+    GetDateById(taskId) {
+        for (let i = 0; i < this.list.length; ++i) {
+            if (this.list[i].id === taskId) {
+                return (this.list[i].date);
+            }
+        }
+        
+        return (false);
     }
 
     SortList() {
@@ -133,7 +144,6 @@ function SubmitFunction() {
     // if (!(listInfo)) {
     //     localStorage.setItem("listInfo", JSON.stringify(list1));
     // }
-    
 
     if (inputText.value !== '' 
         && inputImportance.value !== '' 
@@ -141,30 +151,18 @@ function SubmitFunction() {
         && inputImportance.value < 6 ) {
 
         list1.CreateTask(inputText.value, inputImportance.value);
-        console.log(list1);
         localStorage.setItem("listInfo", JSON.stringify(list1));
          
-        // let nextCounter = ++nameCounter + 1;
-        // let taskNote = document.createElement()
         listCont.innerHTML += `
             <div class="task-cont">
                 <input type="checkbox" class="chck-box" name="#${nameCounter}">
-                <label class="checkbox-label" for="${nameCounter}"> TODO: ${inputText.value}, ${inputImportance.value}</label>
+                <label class="checkbox-label" for="#${nameCounter}"> Task: ${inputText.value}, Priority: ${inputImportance.value}, Date:</label>
                 <button type="submit" class="btn-edit"> </button>
                 <button type="submit" class="btn-remove"> </button>
             </div>
             <hr style="color: #fff">
         `;
-
-
-
-
     }
-
-
-
-
-    
 }
 submitBtn.addEventListener('click', SubmitFunction);
 
