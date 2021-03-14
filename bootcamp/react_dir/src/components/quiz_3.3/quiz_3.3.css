@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quiz-cont {
+    height: 700px;
+    width: 700px;
+    position: relative;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.quiz-title {
+    font-size: 32px;
+    height: 20%
+}
+
+.qst1-cont,
+.qst2-cont {
+    height: 40%;
+    font-size: 20px;
+}
+
+.qst1-title,
+.qst2-title {
+    font-size: 24px;
+}
+
+.qst1-input,
+.qst2-input {
+    height: 40px;
+    width: 100px;
+}
