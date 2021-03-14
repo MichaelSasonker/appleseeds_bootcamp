@@ -1,0 +1,39 @@
+
+.box-cont {
+    height: 800px;
+    width: 800px;
+}
+.box1 { 
+    background-color: green;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+.box2 { 
+    background-color: pink;
+    height: 450px;
+    width: 450px;
+    position: relative;
+    top: 22px;
+    left: 22px;
+}
+
+.box3 { 
+    background-color: blue;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.box4 { 
+    background-color: white;
+    height: 100px;
+    width: 300px;
+    position: relative;
+    top: 80px;
+    left: 10px;
+    margin: 40px;
+}
