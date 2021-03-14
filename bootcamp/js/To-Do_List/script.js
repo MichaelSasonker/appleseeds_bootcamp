@@ -133,11 +133,11 @@ class ToDoList {
 }
 
 
-
+// CHECK IF LOCAL STORAGE CREATED!!!! 
 // let listInfo = JSON.parse(localStorage.getItem("listInfo"));
 
 let nameCounter = 1;
-function SubmitFunction() {
+function InsertFunction() {
     ++nameCounter;
     //  null
     // check if is already created!!!
@@ -154,53 +154,51 @@ function SubmitFunction() {
         localStorage.setItem("listInfo", JSON.stringify(list1));
          
         listCont.innerHTML += `
-            <div class="task-cont">
+            <div class="task-cont" data-attr="#${nameCounter}">
                 <input type="checkbox" class="chck-box" name="#${nameCounter}">
                 <label class="checkbox-label" for="#${nameCounter}"> Task: ${inputText.value}, Priority: ${inputImportance.value}, Date:</label>
-                <button type="submit" class="btn-edit"> </button>
-                <button type="submit" class="btn-remove"> </button>
+                <button data-attr="#${nameCounter}" type="submit" class="btn-edit"> </button>
+                <button data-attr="#${nameCounter}" type="submit" class="btn-remove"> </button>
             </div>
-            <hr style="color: #fff">
-        `;
+            <hr data-attr="#${nameCounter}" style="color: #fff">
+            `;
+            tasksCont = document.querySelectorAll('.task-cont');
+            btnsEdit =  document.querySelectorAll('.btn-edit');
+            btnsRemove =  document.querySelectorAll('.btn-remove');
+
+            btnsRemove.forEach(btn => {
+                btn.addEventListener('click', RemoveTaskFunction);  
+            })
     }
 }
-submitBtn.addEventListener('click', SubmitFunction);
+//ask about add event listener to buttons & about local storage
+submitBtn.addEventListener('click', InsertFunction);
+ 
+// define global variables
 
+function RemoveTaskFunction(e) {
+    console.log('aaa');
+}
+// if (listCont.innerHTML != '') {
+// }    
+
+
+
+
+
+
+// if (listCont.innerHTML != '') {
+//     const tasksCont = document.querySelectorAll('.task-cont');
+//     const btnsEdit =  document.querySelectorAll('.btn-edit');
+//     const btnsRemove =  document.querySelectorAll('.btn-remove');
+//     console.log(tasksCont);
+//     console.log(btnsEdit);
+//     console.log(btnsRemove);
+// }
 
 
 let list1 = new ToDoList();
 function MainFunction() {
-
-    // let task1 = new Task('CRUD');
-    // let task2 = new Task('Create');
-    // let task3 = new Task('Read');
-
-    // // task1.Print();
-    // // task2.Print();
-    // // task3.Print();
-
-    // // let list1 = new ToDoList();
-    // list1.CreateTask('Clean');
-    // list1.CreateTask('Read a book');
-    // list1.CreateTask('Exercise');
-    // list1.Print();
-
-    // console.log(list1.UpdateStatusToDone(100));
-
-    // console.log(list1.ReadTask(104));
-    // console.log(list1.UpdateText(105, 'Clean the house!'));
-    // list1.Print();
-
-    // console.log(list1.UpdateStatusToNotDone(100));
-    // console.log(list1.DeleteTask(100));
-    // list1.Print();
-
-    // list1.UpdateStatusToDone(105);
-    // list1.UpdateStatusToDone(104);
-    // list1.Print();
-
-    // list1.SortList();
-    // list1.Print();
 
     // localStorage.setItem(  'test', JSON.stringify(list1));
 }; MainFunction();
