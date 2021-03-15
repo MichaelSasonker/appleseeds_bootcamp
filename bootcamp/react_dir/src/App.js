@@ -1,13 +1,11 @@
 
 import React from 'react';
-import IncrementButton from './components/increment_7.1/increment_7.1'
+import ButtonShowOrHide from './components/hide_and_seek/hide_and_seek'
 
 class App extends React.Component {
   render() {
     return(
-      <div>
-        <IncrementButton />
-      </div>
+        <ButtonShowOrHide />
     );
   };
 }
