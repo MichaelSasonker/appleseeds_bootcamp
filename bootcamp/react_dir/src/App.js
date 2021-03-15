@@ -1,15 +1,12 @@
 
 import React from 'react';
-import Card from './components/class_components/class_components_6.1';
-import Faker from 'faker';
+import IncrementButton from './components/increment_7.1/increment_7.1'
 
 class App extends React.Component {
   render() {
     return(
       <div>
-        <Card srcImg={Faker.image.image()} textTitle={Faker.lorem.sentence()} textLink={Faker.lorem.word()}/>
-        <Card srcImg={Faker.image.image()} textTitle={Faker.lorem.sentence()} textLink={Faker.lorem.word()}/>
-        <Card srcImg={Faker.image.image()} textTitle={Faker.lorem.sentence()} textLink={Faker.lorem.word()}/>
+        <IncrementButton />
       </div>
     );
   };
