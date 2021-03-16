@@ -1,11 +1,15 @@
 
 import React from 'react';
-import LifeCycle from './components/life_cycle_methods_8.1/life_cycle_methods_8.1'
+import Box from './components/box_animations/box_animations'
 
 class App extends React.Component {
   render() {
     return(
-        <LifeCycle />
+      <div>
+        <Box width='100px'/>
+        <Box width='150px'/>
+        <Box width='70px'/>
+      </div>
     );
   };
 }
