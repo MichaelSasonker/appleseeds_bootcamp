@@ -1,14 +1,12 @@
 
 import React from 'react';
-import Box from './components/box_animations/box_animations'
+import ChangingBox from './components/changing_box/changing_box_8.2'
 
 class App extends React.Component {
   render() {
     return(
       <div>
-        <Box width='100px'/>
-        <Box width='150px'/>
-        <Box width='70px'/>
+        <ChangingBox />
       </div>
     );
   };

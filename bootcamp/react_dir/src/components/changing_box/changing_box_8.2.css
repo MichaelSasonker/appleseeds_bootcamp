@@ -1,0 +1,15 @@
+body {
+    background-color: #f0f0f0;
+}
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: relative;
+    left: 400px; 
+    top: 200px; 
+}
+
+.circle {
+    border-radius: 50%;
+}
