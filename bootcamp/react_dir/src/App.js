@@ -1,11 +1,11 @@
 
 import React from 'react';
-import ButtonShowOrHide from './components/hide_and_seek/hide_and_seek'
+import LifeCycle from './components/life_cycle_methods_8.1/life_cycle_methods_8.1'
 
 class App extends React.Component {
   render() {
     return(
-        <ButtonShowOrHide />
+        <LifeCycle />
     );
   };
 }
