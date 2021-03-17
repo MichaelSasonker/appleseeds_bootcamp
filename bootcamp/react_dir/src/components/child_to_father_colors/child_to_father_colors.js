@@ -1,3 +1,27 @@
+import React from 'react';
+
+class CustomButton extends React.Component {
+    state = { color: this.props.buttonColor};
+
+    OnButtonClicked = () => {
+        this.props.onClickEvent(this.state.color)
+    }
+
+    render() {
+        return (
+            <>
+                <button type='submit' onClick={this.OnButtonClicked} style={{backgroundColor: this.props.buttonColor}}>
+                    {this.props.buttonColor}
+                </button>
+            </>
+        );
+    }
+
+}
+
+export default CustomButton;
+
+/* App.js
 
 import React from 'react';
 import CustomButton from './components/child_to_father_colors/child_to_father_colors';
@@ -36,3 +60,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+*/
