@@ -1,16 +1,35 @@
 import React from 'react';
-import CheckboxList from './components/checkbox_11.2/checkbox_list';
-
+import FormReview from './components/form_reviewer_11.3/form_reviewer_11.3';
+import Form from './components/form_reviewer_11.3/form_form_11.3';
+import './components/form_reviewer_11.3/form_reviewer_11.3.css';
 
 class App extends React.Component {
+    state = { 
+      isShowen: true 
+    };
 
-  render() {
-    return(
-      <div>
-        <CheckboxList />
-      </div>
-    );
-  };
+    ContinueHandler = (e, stateObj) => {
+        console.log(stateObj)
+        e.preventDefault();
+        this.setState({ isShowen: false });
+    };
+
+    CancelHandler = (e) => {
+        e.preventDefault();
+        this.setState({ isShowen: true });
+    };
+
+    SubmitHandler = (e) => {
+        alert("submitted");
+    };
+
+    render() {
+        return (
+          (this.state.isShowen) 
+          ? <Form onContinue={this.ContinueHandler} />
+          : <FormReview handleCancel={this.CancelHandler} handleSubmit={this.SubmitHandler} />
+        );
+    }
 }
 
 export default App;

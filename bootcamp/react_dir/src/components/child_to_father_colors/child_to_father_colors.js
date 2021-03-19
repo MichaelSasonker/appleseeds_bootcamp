@@ -4,7 +4,7 @@ class CustomButton extends React.Component {
     state = { color: this.props.buttonColor};
 
     OnButtonClicked = () => {
-        this.props.onClickEvent(this.state.color)
+        this.props.onClickEvent(this.state.color);
     }
 
     render() {
@@ -16,7 +16,6 @@ class CustomButton extends React.Component {
             </>
         );
     }
-
 }
 
 export default CustomButton;

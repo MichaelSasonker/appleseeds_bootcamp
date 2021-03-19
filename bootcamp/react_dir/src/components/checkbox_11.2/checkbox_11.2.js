@@ -8,7 +8,6 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        console.log(this.state.value);
         return (
             <>
                 <input type='checkbox' checked={this.state.checked} />
