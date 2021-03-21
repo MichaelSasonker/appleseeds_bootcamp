@@ -1,12 +1,12 @@
 import React from 'react';
-import ChuckNorris from '../src/components/chuck_norris_12.1/chuck_norris_12.1';
+import DataMassaging from './components/react_data_massaging_13.1/react_data_massaging_13.1';
 
 class App extends React.Component {
 
     render() {
-        return (
+        return( 
             <div>
-                <ChuckNorris />
+                <DataMassaging />
             </div>
         );
     }
