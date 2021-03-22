@@ -1,15 +1,16 @@
 import React from 'react';
-import Avatars from './components/avatars_13.2/avatars_13.2';
+import Input from './components/focus_14.1/focus_14.1';
 
 class App extends React.Component {
 
     render() {
-        return( 
+        return (
             <div>
-                <Avatars />
+                <Input />
             </div>
         );
     }
+
 }
 
 export default App;
