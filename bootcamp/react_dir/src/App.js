@@ -1,12 +1,12 @@
 import React from 'react';
-import Input from './components/focus_14.1/focus_14.1';
+import CopyText from './components/copy_14.2/copy_14.2';
 
 class App extends React.Component {
 
     render() {
         return (
             <div>
-                <Input />
+                <CopyText />
             </div>
         );
     }
