@@ -1,12 +1,12 @@
 import React from 'react';
-import CopyText from './components/copy_14.2/copy_14.2';
+import MainCont from './components/products_16.1/products_16.1';
 
 class App extends React.Component {
 
     render() {
         return (
             <div>
-                <CopyText />
+                <MainCont />
             </div>
         );
     }

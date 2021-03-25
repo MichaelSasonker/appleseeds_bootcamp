@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image: linear-gradient(90deg ,#000046, #1CB5E0);
+    font-family: cursive;
+    color: white;
+}
+
+.home-page {
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.home-page h1 {
+    font-weight: 200;
+}
+
+.product-cont {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-link {
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 18px;
+}
+
+.detail {
+    margin-top: 70px;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.detail .left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.detail .right   {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.detail .left .title {
+    font-size: 32px;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 35px;
+    width: 150px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    font-family: cursive;
+    color: #fff;
+}
