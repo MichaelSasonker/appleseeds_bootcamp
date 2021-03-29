@@ -1,16 +1,13 @@
 import React from 'react';
-import MainCont from './components/products_16.1/products_16.1';
+import Text from './components/text_18.1/text_18.1';
 
-class App extends React.Component {
+const App = () => {
 
-    render() {
-        return (
-            <div>
-                <MainCont />
-            </div>
-        );
-    }
-
+    return (
+        <div>
+            <Text />
+        </div>
+    );
 }
 
 export default App;

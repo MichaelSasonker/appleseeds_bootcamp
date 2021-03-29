@@ -24,8 +24,17 @@ class Avatar extends React.Component {
     }
 
     handleDelete = async (e) => {
-        console.log(e.target.parentElement.id)
         await Api.delete(`/${e.target.parentElement.id}`);
+        this.props.isUpdate(true);
+    }
+
+    /* TODO: check how to update!!
+     * maybe when update button is pressed create two inputs and two new buttons!
+     * maybe use the upper inputs */   
+    handleUpdate = async (e) => {
+        e.preventDefault();
+        console.log(e.target.parentElement.children[0])
+        await Api.put(`/${e.target.parentElement.id}`, 'hello');
         this.props.isUpdate(true);
     }
 
@@ -49,6 +58,7 @@ class Avatar extends React.Component {
                         {this.state.country}
                     </div>
                     <button type='submit' onClick={this.handleDelete}>Delete</button>
+                    <button type='submit' onClick={this.handleUpdate}>Update</button>
                 </div>
             );
         };
