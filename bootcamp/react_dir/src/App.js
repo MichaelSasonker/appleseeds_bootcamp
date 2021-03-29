@@ -1,11 +1,11 @@
 import React from 'react';
-import Text from './components/text_18.1/text_18.1';
+import ToDo from './components/simple_todo_18.2/simple_todo_18.2';
 
 const App = () => {
 
     return (
         <div>
-            <Text />
+            <ToDo />
         </div>
     );
 }
