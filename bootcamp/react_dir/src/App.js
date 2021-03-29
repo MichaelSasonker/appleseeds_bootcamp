@@ -1,11 +1,11 @@
 import React from 'react';
-import ToDo from './components/simple_todo_18.2/simple_todo_18.2';
+import Time from './components/whats_the_time_18.3/whats_the_time_18.3';
 
 const App = () => {
 
     return (
         <div>
-            <ToDo />
+            <Time />
         </div>
     );
 }
