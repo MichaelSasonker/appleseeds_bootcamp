@@ -1,12 +1,12 @@
 import React from 'react';
-import Time from './components/whats_the_time_18.3/whats_the_time_18.3';
+import CheckList from './components/marking_and_deleting_18.4/marking_and_deleting_18.4';
 
 const App = () => {
 
     return (
-        <div>
-            <Time />
-        </div>
+        <React.Fragment>
+            <CheckList />
+        </React.Fragment>
     );
 }
 
