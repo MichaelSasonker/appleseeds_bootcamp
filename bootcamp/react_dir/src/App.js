@@ -1,11 +1,12 @@
 import React from 'react';
-import CheckList from './components/marking_and_deleting_18.4/marking_and_deleting_18.4';
+import SimpleFetch from './components/simple_fetch_19.1/simple_fetch_19.1';
+
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <CheckList />
+            <SimpleFetch />
         </React.Fragment>
     );
 }
