@@ -1,12 +1,12 @@
 import React from 'react';
-import Algolia from './components/algolia_19.3/algolia_19.3';
+import ChuckNorris from './components/refactor_chuck_norris_19.4/refactor_chuck_norris_19.4';
 
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <Algolia />
+            <ChuckNorris />
         </React.Fragment>
     );
 }
