@@ -1,12 +1,12 @@
 import React from 'react';
-import Countries from './components/countries_of_the_world_19.2/countries_of_the_world_19.2';
+import Algolia from './components/algolia_19.3/algolia_19.3';
 
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <Countries />
+            <Algolia />
         </React.Fragment>
     );
 }
