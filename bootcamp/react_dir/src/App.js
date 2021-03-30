@@ -1,12 +1,12 @@
 import React from 'react';
-import SimpleFetch from './components/simple_fetch_19.1/simple_fetch_19.1';
+import Countries from './components/countries_of_the_world_19.2/countries_of_the_world_19.2';
 
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <SimpleFetch />
+            <Countries />
         </React.Fragment>
     );
 }
