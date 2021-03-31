@@ -16,7 +16,7 @@ const VideoRef = () => {
 
     return (
         <div>
-            <video ref={videoRef} width="600" height="500" controls>
+            <video ref={videoRef} width="600" height="500">
                 <source src={Video} type="video/mp4"/>
             </video> 
             <div>
