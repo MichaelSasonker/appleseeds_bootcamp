@@ -1,12 +1,12 @@
 import React from 'react';
-import ChuckNorris from './components/refactor_chuck_norris_19.4/refactor_chuck_norris_19.4';
+import CancelRquest from './components/cancel_request_20.1/cancel_request_20.1';
 
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <ChuckNorris />
+            <CancelRquest />
         </React.Fragment>
     );
 }
