@@ -1,11 +1,11 @@
 import React from 'react';
-import VideoRef from './components/video_21.2/video_21.2'
+import ToggleImg from './components/img_toggle_21.3/img_toggle_21.3';
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <VideoRef />
+            <ToggleImg />
         </React.Fragment>
     );
 }
