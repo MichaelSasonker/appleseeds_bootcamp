@@ -1,12 +1,12 @@
 import React from 'react';
-import CancelRquest from './components/cancel_request_20.1/cancel_request_20.1';
+import Edit from './components/edit_21.1/edit_21.1';
 
 
 const App = () => {
 
     return (
         <React.Fragment>
-            <CancelRquest />
+            <Edit />
         </React.Fragment>
     );
 }
