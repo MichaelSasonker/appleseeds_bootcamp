@@ -1,4 +1,3 @@
-const { worker } = require('cluster');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -33,9 +32,10 @@ router.get('/', (req, res) => {
             isActive: false
         }
         console.log(obj);
-        // workersJSON.workers.push(req.body);
-        fs.writeFileSync('./workers.json', JSON.stringify(workersJSON.workers.push(obj)));
-        res.send(workersJSON.workers);
+        let tempJSON = workersJSON;
+        tempJSON.workers.push(obj);
+        fs.writeFileSync('./workers.json', JSON.stringify(tempJSON));
+        res.send(workersJSON);
     }
 })
 
