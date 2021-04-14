@@ -6,6 +6,7 @@
 !*.js
 !*.css
 !*.html
+!*.json
 !*.jpeg
 !*.jpg
 !*.png
@@ -23,3 +24,4 @@
 
 !.gitignore
 
+node_modules
