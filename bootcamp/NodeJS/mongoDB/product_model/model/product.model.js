@@ -3,7 +3,8 @@ const validator = require('validator');
 
 mongoose.connect('mongodb://127.0.0.1:27017/Products-Model', {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true,
 });
 
 const Product = mongoose.model('Product', {
@@ -24,8 +25,6 @@ const Product = mongoose.model('Product', {
         default: true
     },
     details: {
-        type: Object,
-        required: true,
         description: {
             type: String,
             required: true,
@@ -54,7 +53,7 @@ const Product = mongoose.model('Product', {
             type: Array,
             required: true,
             validate(value) {
-                if (value.length <= 2) {
+                if (value.length < 2) {
                     throw new Error('Images array must contains at least two images!');
                 }
             }
@@ -63,9 +62,8 @@ const Product = mongoose.model('Product', {
             type: String,
             required: true,
             validate(value) {
-                console.log(value);
-                // if (!validator.isMobilePhone(value, "he-IL")) {
-                if ((value[0] !== '0' || value[1] !== '5') && value.length !== 10) {
+                // if ((value[0] !== '0' || value[1] !== '5') && value.length !== 10) {
+                if (!validator.isMobilePhone(value, "he-IL")) {
                     throw new Error('Invalid phone number!');
                 }
             }
@@ -98,7 +96,7 @@ const p2 = new Product({
         price: 1500,
         discount: 10,
         imagesArr: ['img1.png', 'img2.png'],
-        phoneNumber: '44'
+        phoneNumber: '0544666666'
     }
 });
 
