@@ -1,0 +1,15 @@
+{
+  "name": "Itay_sessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server_test_1.js",
+  "scripts": {
+    "start": "nodemon server_test_1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
