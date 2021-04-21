@@ -1,76 +1,90 @@
 const Product = require('../models/product.model');
 
-const getProducts = (req, res) => {
-    Product.find({}).then(result => {
+const getProducts = async (req, res) => {
+    try {
+        const result = await Product.find({});
+
         res.status(200).send(result);
-    }).catch((err) => {
+    } catch (err) {
+
         res.status(400).send(err);
-    });
+    }
 }
 
-
-const getProductByID = (req, res) => {
+const getProductByID = async (req, res) => {
     const _id = req.params.id;
-    Product.findById(_id).then(result => {
+
+    try {
+        const result = await Product.findById(_id);
+
         res.status(200).send(result);
-    }).catch(err => {
+    } catch(err) {
+
         res.status(400).send(err);
-    });
+    }
 }
 
 
-const getProductByName = (req, res) => {
+const getProductByName = async (req, res) => {
     const name = req.params.name;
-    // console.log(req.query.name)
-    Product.findOne({ name }).then(result => {
+    try {
+        const result = await Product.findOne({ name });
         if (!result) {
             return res.status(404).send();
         }
+
         res.status(200).send(result);
-    }).catch(err => {
+    } catch(err) {
+
         res.status(400).send(err);
-    });
+    }
 }
 
 
-const getActiveProducts = (req, res) => {
-    Product.find({ isActive: true }).then(result => {
+const getActiveProducts = async (req, res) => {
+    try {
+        const result = await Product.find({ isActive: true });
         if (!result) {
             return res.status(404).send();
         }
+        
         res.status(200).send(result);
-    }).catch(err => {
+    } catch(err) {
+
         res.status(400).send(err);
-    });
+    }
 }
 
 
-const getProductsInPriceRange = (req, res) => {
+const getProductsInPriceRange = async (req, res) => {
     const minPrice = req.query.minPrice;
     const maxPrice = req.query.maxPrice;
-    console.log(minPrice)
-    console.log(typeof maxPrice)
-    Product.find({"details.price": {$gte: minPrice, $lte: maxPrice }}).then(result => {
+    try {
+        const result = await Product.find({"details.price": {$gte: minPrice, $lte: maxPrice }});
         if(!result) {
             return res.status(404).send();
         }
-        res.send(result);
-    }).catch(err => {
+
+        res.status(200).send(result);
+    } catch(err) {
+
         res.status(400).send(err);
-    })
+    }
 }
 
-const addProduct = (req, res) => {
-    const newProduct = req.body;
-    console.log(newProduct);
 
+const addProduct = async (req, res) => {
+    const newProduct = req.body;
     const product = new Product(newProduct);
 
-    product.save().then(() => {
+    try {
+        await product.save();
+
         res.status(201).send(product);
-    }).catch(err => {
+    } catch(err) {
+        
         res.status(400).send(err);
-    });
+    }
 }
 
 
